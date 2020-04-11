@@ -1,0 +1,33 @@
+body
+{
+  margin: 0px;
+  
+  h1
+  {
+   margin: 0px;
+   padding-top: 1rem; 
+  }
+
+  form
+  {
+   margin: 1rem; 
+   
+   input
+   {
+    width: 10vw;
+    height: 1.8vw; 
+    margin-right: .5vw;
+    padding-left: 10px;
+    border: transparent;
+    font-size: 1rem;
+    overflow: hidden;
+   }
+  }
+
+  #layout-main{
+    height: 100%;
+    text-align: center;
+    background-color: mintcream;
+  }
+}
+
