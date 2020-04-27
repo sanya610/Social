@@ -4,7 +4,7 @@ body {
     margin: 0px;
     padding-top: 1rem; }
   body form {
-    margin: 1rem; }
+    margin-top: 1rem; }
     body form input {
       width: 10vw;
       height: 1.8vw;
@@ -13,7 +13,8 @@ body {
       border: transparent;
       font-size: 1rem;
       overflow: hidden; }
+    body form textarea {
+      margin: 0px; }
   body #layout-main {
     height: 100%;
-    text-align: center;
     background-color: mintcream; }

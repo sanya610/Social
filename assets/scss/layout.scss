@@ -10,7 +10,7 @@ body
 
   form
   {
-   margin: 1rem; 
+   margin-top: 1rem; 
    
    input
    {
@@ -22,11 +22,16 @@ body
     font-size: 1rem;
     overflow: hidden;
    }
+
+   textarea
+   {
+    margin: 0px; 
+   }
   }
 
   #layout-main{
     height: 100%;
-    text-align: center;
+    //text-align: center;
     background-color: mintcream;
   }
 }
