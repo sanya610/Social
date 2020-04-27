@@ -19,7 +19,7 @@ module.exports.home = function(req, res){
       populate:{
        path:'user'   
       }  
-    })
+    }) 
     .exec(function(err, posts){
         return res.render('home', {
             title: "Codeial | Home",
