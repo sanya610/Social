@@ -1,4 +1,32 @@
-body {
-  background-color: cadetblue; }
-  body p {
-    font-size: 1rem; }
+#profile-section {
+  width: 50%;
+  padding-left: 22%;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 1rem; }
+  #profile-section img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%; }
+  #profile-section #update-section {
+    padding-top: 10px;
+    display: block;
+    margin-left: 314.5px; }
+    #profile-section #update-section #update-button {
+      margin-top: 20px;
+      height: 35px;
+      width: 100px;
+      border: none;
+      text-align: center;
+      margin-left: 95px;
+      background-color: #c7c7c7;
+      box-shadow: 5px 4px 8px 1px #076b6b; }
+    #profile-section #update-section input {
+      font-size: 1rem;
+      display: block;
+      width: 260px;
+      height: 27px;
+      border: none;
+      border-bottom: 2px solid #1f1f1f;
+      margin: 23px; }

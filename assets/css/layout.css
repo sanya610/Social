@@ -1,20 +1,5 @@
 body {
   margin: 0px; }
-  body h1 {
-    margin: 0px;
-    padding-top: 1rem; }
-  body form {
-    margin-top: 1rem; }
-    body form input {
-      width: 10vw;
-      height: 1.8vw;
-      margin-right: .5vw;
-      padding-left: 10px;
-      border: transparent;
-      font-size: 1rem;
-      overflow: hidden; }
-    body form textarea {
-      margin: 0px; }
-  body #layout-main {
-    height: 100%;
-    background-color: mintcream; }
+
+#layout-main {
+  height: 80%; }

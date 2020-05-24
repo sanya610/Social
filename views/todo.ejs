@@ -1,0 +1,89 @@
+  <link rel="stylesheet" href="/css/todo.css">
+     
+     <!-- Fontawesome -->
+     <script src="https://kit.fontawesome.com/1fea76eb58.js" crossorigin="anonymous"></script>
+
+
+
+      <div id="form-container">    
+
+      <!--Form1 taking input from user-->
+      <form action="/users/features/todo/createTodo" method="POST">    
+                <div id="div0">
+                     <p id="heading">Todo List</p>
+                </div> 
+
+                <div id="div1">
+                     <p class="subheadings">Description</p>
+                     <textarea rows="2" cols="60" name="description" placeholder="What do you need to do ?" required></textarea>
+                </div>
+
+                <div id="div2">       
+                     <div id="div21"> 
+                         <p class="subheadings">Category</p>
+                         <select name="category">
+                            <option value="none" selected disabled hidden>Choose a category</option>  
+                            <option value="Personal">Personal</option>
+                            <option value="Work">Work</option>
+                            <option value="Other">Other</option>
+                            <option value="Cleaning">Cleaning</option>
+                         </select>   
+                     </div>     
+        
+                     <div id="div22">
+                         <p class="subheadings">Due Date</p> 
+                         <input type="date" name="duedate">  
+                     </div>
+                </div>
+
+
+                <div id="div3">     
+                     <button id="button1" type="submit">
+                     <i class="fas fa-plus"></i>
+                     <span>Add task</span>
+                     </button>
+                </div> 
+      </form>      
+      </div>
+     
+    
+
+
+    <!--Form2 Entered Content will be shown to browser-->
+    <form action="/users/features/todo/delete-list" method="POST">
+
+    <!--delete button-->
+    <div id="div5">  
+         <button class="button2" type="submit" id="delete-list"><i class="fas fa-trash-alt"></i><span> delete</span></button>    
+    </div>
+
+    <div id="main-div"> 
+    <ul> 
+    <% for(let i of list){ %>
+      <li>
+           <div id="checkbox-div">
+             <input type="checkbox" value="<%= i._id %>"  name="search<%= i._id%>">       
+           </div> 
+
+           <div id="content">
+             <p><%= i.description %></p>
+             <div id="date-content">
+               <i class="far fa-calendar-alt"></i>
+               <%= i.duedate %>  
+             </div>
+           </div>
+
+           <div id="side-div">
+            <div id="category-box">   
+             <%= i.category %>
+            </div>   
+           </div> 
+
+      </li>
+    <% } %>
+    </ul> 
+    </div>
+    </form> 
+    
+  
+    <script type="text/javascript" src="/js/home.js"></script>

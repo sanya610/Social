@@ -1,4 +1,5 @@
-    <header>
+   <!-- <script src="https://kit.fontawesome.com/1fea76eb58.js" crossorigin="anonymous"></script> -->
+   <header>
       <p>Social</p>
     
     <div id="header-id">  
@@ -6,8 +7,14 @@
         <% if (locals.user){ %>
 
             <li>
-                <a href="/users/profile">
-                  <%= user.name %>
+                <a href="/">Home</a>
+            </li>
+
+
+            <li>
+                <a href="/users/profile/<%=user.id%>">
+                  <!-- <%= user.name %> -->
+                  Profile
                 </a>
             </li>
 

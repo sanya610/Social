@@ -1,7 +1,7 @@
 header {
-  height: 7%;
+  height: 8%;
   width: 100%;
-  background-color: darkolivegreen;
+  background-color: #024e53;
   font-size: 1.5rem;
   margin: 0px; }
   header p {
@@ -9,7 +9,7 @@ header {
     color: white;
     padding-left: 1.3rem;
     padding-top: .5rem;
-    font-size: 2.7rem;
+    font-size: 2.3rem;
     float: left; }
   header #header-id {
     float: right;
@@ -22,5 +22,5 @@ header {
       display: inline; }
       header #header-id li a {
         text-decoration: none;
-        color: black;
+        color: white;
         padding-right: 20px; }

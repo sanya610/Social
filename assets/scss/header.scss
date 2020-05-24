@@ -1,17 +1,19 @@
 header
 {
- height: 7%;  
+ height: 8%;  
  width: 100%;
- background-color: darkolivegreen;
+ background-color: rgb(2, 78, 83); 
+// background: linear-gradient(53deg, rgba(0,0,0,1) 0%, rgba(5,79,85,1) 14%, rgba(8,146,71,1) 29%, rgba(8,138,57,1) 46%, rgba(9,112,119,1) 62%, rgba(4,32,37,1) 100%);
  font-size: 1.5rem;
  margin: 0px;
  
- p{
+ p
+ {
   margin: 0px;
   color: white;
   padding-left: 1.3rem;
   padding-top: .5rem;
-  font-size: 2.7rem;
+  font-size: 2.3rem;
   float: left;
  }
 
@@ -29,7 +31,7 @@ header
     display: inline;  
     a{
       text-decoration: none; 
-      color: black;
+      color: white;
       padding-right: 20px;
     }
    }

@@ -1,7 +1,7 @@
 footer {
   width: 100%;
   height: 10%;
-  background-color: #d3cccc;
+  background-image: linear-gradient(to bottom right, #5d817e, #02393d);
   margin: 0px; }
   footer #footer-container {
     float: left;

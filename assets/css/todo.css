@@ -1,0 +1,224 @@
+body
+{
+ margin: 0;
+}
+
+/*----- Main-heading section -----*/
+#div0
+{
+ width: 100%;
+ height: 100px;   
+ border-bottom: 1px solid rgb(203, 208, 212);
+}
+
+#heading
+{
+ padding-top: 30px;   
+ font-size: 3rem;
+ text-align: center;
+ color: dimgray;
+ text-transform: uppercase;
+ font-family: 'Times New Roman', Times, serif;
+ margin: 0px;
+}
+
+
+/*-----Description-Section-----*/
+#div1
+{
+ width: 100%;
+ height: 90px;   
+ border-bottom: 1px solid rgb(203, 208, 212);
+}
+
+.subheadings
+{
+ margin: 0;
+ padding: 14px 0px; 
+ margin-left: 2vw;  
+ font-size: 1.1rem;
+ font-family: sans-serif;
+ text-transform: uppercase;
+ color: darkslategrey;
+}
+
+#div1 > textarea
+{
+ margin-left: 2vw;
+ border: none;
+}
+
+
+/*----- Category and Duedate section ------*/
+#div2
+{
+ width: 100%; 
+ height: 90px;
+ display: flex;  
+ border-bottom: 1px solid rgb(203, 208, 212);
+ background-color: whitesmoke;
+}
+
+#div21
+{
+ float: left;  
+}
+
+#div22
+{
+ margin-left: 40%;
+ border-left: 1px solid rgb(203, 208, 212); 
+}
+
+#div21 > select
+{
+ margin-left: 2vw; 
+ border: none;
+ width: 160px;
+ height: 20px;
+ font-size: .9rem;
+ color: darkslategrey;
+ background-color: whitesmoke;
+}
+
+#div22 > input
+{
+ margin-left: 2vw;
+ border: none;
+ width: 160px;
+ height: 20px;
+ font-size: .9rem;
+ color: darkslategrey;
+ background-color: whitesmoke;
+}
+
+
+#div3
+{
+ margin: 41px 0px;
+ margin-left: 40%;
+ display: inline-block;
+}
+
+#button1
+{
+ margin-top: 30px;
+ margin: 30px 0px;
+ width: 190px;
+ height: 60px;
+ font-size: 1.5rem;
+ text-transform: uppercase;
+ color: white ;
+ border: none;
+ background-color: rgb(109, 175, 96);
+ box-shadow: 10px 10px 60px 7px rgb(211, 206, 208);
+}
+
+#button1:hover
+{
+ background-color: teal; 
+}
+
+
+
+/* -----Form2 Entered Content Shown----*/
+#main-div
+{
+ display: block; 
+ width: 100%;   
+}
+
+/* ---Delete button-- */
+.button2
+{
+ float: right;   
+ margin: 30px 0px; 
+ margin-right: 38.5%;
+ position: relative; 
+
+ margin-top: -147px;
+ width: 190px;
+ height: 60px;
+ font-size: 1.5rem;
+ text-transform: uppercase;
+ color: white ;
+ border: none;
+ background-color: rgb(9, 83, 83); 
+ box-shadow: 10px 10px 60px 7px rgb(211, 206, 208);
+}
+
+.button2:hover
+{
+ background-color: rgb(50, 127, 129); 
+}
+
+/* --checkbox-- */
+ul
+{
+ list-style: none;
+}
+
+#checkbox-div
+{
+ display: inline-block;  
+ width: 10%; 
+}
+
+#checkbox-div > input
+{ 
+ width: 18px;
+ height: 18px; 
+ margin-bottom: 20px;
+}
+
+/* ---Description and duedate---*/
+#content
+{
+ display: inline-block; 
+ width: 60%;  
+}
+
+#content > p
+{
+ margin: 0;
+ color: rgb(62, 63, 63);
+ font-size: 1.3rem;
+ font-family: sans-serif;
+ margin-bottom: 5px;
+}
+
+#date-content
+{
+ color: rgb(153, 149, 149); 
+ font-size: 1.1rem;
+}
+
+#date-content>i
+{
+ margin-right: 7px;  
+}
+
+/* ---Category---*/
+#side-div
+{
+ display: inline-block;
+ width: 20%;  
+}
+
+#category-box
+{
+ text-align: center;
+ padding-top: 10px;   
+ width: 160px;
+ height: 50px;   
+ background-color: rgb(197, 74, 99);
+ color: white;   
+ margin-bottom: 5px;
+ font-size: 1.6rem;
+ font-family: sans-serif;
+}
+
+#category-box:hover
+{
+ background-color: rgb(163, 79, 104);
+}

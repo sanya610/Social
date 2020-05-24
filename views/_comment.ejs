@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/comment.css">
+
+
+<li id="comment">
+    <p>
+    
+      <% if(locals.user && locals.user.id == comment.user.id){ %>
+      <small>
+             <a href="/comments/destroy/<%= comment.id %>">x</i></a>
+      </small> 
+      <% } %>
+      <%= comment.content %>
+      <br>
+      <small>
+            <%= comment.user.name %>
+      </small> 
+ 
+    </p>
+</li>

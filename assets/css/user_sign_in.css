@@ -1,0 +1,40 @@
+#signin {
+  width: 553px;
+  height: 300px;
+  margin-left: 31%;
+  background-image: linear-gradient(to right top, #75c797, #5e9597);
+  border-radius: 40px;
+  margin-top: 120px; }
+  #signin h1 {
+    padding-top: 10px;
+    text-align: center; }
+  #signin #google-login a {
+    text-decoration: none;
+    color: cornsilk;
+    background-color: #447470;
+    box-shadow: 6px 6px 22px 5px #cacaca;
+    margin-left: 212.615px;
+    font-size: 1.3rem; }
+  #signin #form-id {
+    display: block; }
+    #signin #form-id input {
+      display: block;
+      margin: 26px 0px;
+      border: none;
+      width: 320px;
+      height: 40px;
+      font-size: 1rem;
+      margin-left: 106.5px;
+      background-color: #ece5e5;
+      border-radius: 5px;
+      padding-left: 5px; }
+    #signin #form-id button {
+      background-color: #447470;
+      box-shadow: 6px 6px 22px 5px #cacaca;
+      border: none;
+      color: cornsilk;
+      margin-left: 219px;
+      width: 95px;
+      height: 35px;
+      font-size: 1.3rem;
+      cursor: pointer; }
