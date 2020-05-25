@@ -37,7 +37,7 @@ module.exports.update = async function(req,res)
          if(req.file)
          {
 
-          if(fs.existsSync(path.join(__dirname,'..',user.avatar)) && user.avatar)
+          if(fs.existsSync(user.avatar) && user.avatar)
           {
            //we will be deleting from path
            fs.unlinkSync(path.join(__dirname,'..',user.avatar));
