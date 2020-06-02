@@ -24,8 +24,7 @@ module.exports.create = async function(req, res){
 
 
        req.flash('success','Post published!');
-
-      // return res.redirect('back');
+       return res.redirect('back');
    
     }catch(err)
     {

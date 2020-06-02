@@ -30,17 +30,21 @@
  {
       return $(`<li id="post-${post._id}">         
      
-     
-         <small>
-             <a class="delete-post-button" href="/posts/destroy/${ post._id }">x</a>  
-         </small>
-     
-  
-         ${ post.content }
-         <br>
-         <small>
-         ${ post.user.name }   
-         </small>  
+      <p>
+        ${post.content}
+    
+      
+        <br>
+        <small>
+            ${post.user.name}   
+        </small>  
+
+
+        <small>
+              <a class="toggle-like-button" data-likes="${post.likes.length}" href="/likes/toggle/?id=${post._id}&type=Post">
+                ${post.likes.length} Likes
+              </a>
+        </small> 
 
       </p>
 
@@ -56,6 +60,8 @@
         <div class="post-comments-list">
          <ul id="post-comments-${ post._id }">
            
+        
+
          </ul>
         </div> 
       </div>
@@ -89,20 +95,20 @@
 
 
     // loop over all the existing posts on the page (when the window loads for the first time) and call the delete post method on delete link of each, also add AJAX (using the class we've created) to the delete button of each
-    let convertPostsToAjax = function(){
-      $('#posts-list-container>ul>li').each(function(){
-          let self = $(this);
-          let deleteButton = $(' .delete-post-button', self);
-          deletePost(deleteButton);
+  //   let convertPostsToAjax = function(){
+  //     $('#posts-list-container>ul>li').each(function(){
+  //         let self = $(this);
+  //         let deleteButton = $(' .delete-post-button', self);
+  //         deletePost(deleteButton);
 
-          // get the post's id by splitting the id attribute
-          let postId = self.prop('id').split("-")[1]
-          new PostComments(postId);
-      });
-  }
+  //         // get the post's id by splitting the id attribute
+  //         let postId = self.prop('id').split("-")[1]
+  //         new PostComments(postId);
+  //     });
+  // }
 
 
 
   createPost();
-  convertPostsToAjax();
+ // convertPostsToAjax();
 }

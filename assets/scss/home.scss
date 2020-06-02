@@ -80,8 +80,9 @@
 
 
   #posts-list-container
- {
+ { 
   display: block;
+  width: 400px;
   margin-top: 50px;
   margin-left: 30%;
   text-align: left;
@@ -90,6 +91,25 @@
   ul{
      list-style: none;
    }
+
+
+  // .delete-post-button
+  // {
+  //  float: right;
+  //  margin-bottom: 0px;
+  //  margin-right: 80px;
+  // }
+
+  // .post-comments-list
+  // {
+  //   .delete-comment-button
+  //   {
+  //     float: right;
+  //     margin-bottom: 0px;
+  //     margin-right: 80px;
+  //   }
+  // }
+
  }   
 }
 

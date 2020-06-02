@@ -45,6 +45,7 @@
       font-weight: 600; }
   #feed-posts #posts-list-container {
     display: block;
+    width: 400px;
     margin-top: 50px;
     margin-left: 30%;
     text-align: left;
