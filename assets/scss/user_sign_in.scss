@@ -1,14 +1,14 @@
 #signin
 {
    width: 553px;
-   height: 300px;
+   height: 350px;
    margin-left: 31%;
    background-image: linear-gradient(to right top, rgb(117, 199, 151),rgb(94, 149, 151));
+  // background-image: linear-gradient(to right top,rgb(60, 143, 136)/* rgb(130, 223, 169)*/,rgb(4, 94, 97));
    border-radius: 40px;
-   margin-top: 120px;
-
-
+   margin-top: 90px;
   
+
 
   h1{
     padding-top: 10px;
@@ -18,24 +18,40 @@
 
   #google-login
   { 
-    
-
+    width: 146px;
+    height: 35px;
+    padding: 5px 7px 0px 7px;
+    background-color: rgb(68, 116, 112);
+    box-shadow: 6px 6px 8px 0px rgb(202, 202, 202);
+    margin-left: 194.5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
     a{  
         text-decoration: none;
         color: cornsilk;
-        background-color: rgb(68, 116, 112);
-        box-shadow: 6px 6px 22px 5px rgb(202, 202, 202);
-        margin-left: 212.615px;
         font-size: 1.3rem;
+        font-family: sans-serif;
      }
   }
 
-
+  
 
 
   #form-id
   {
     display: block;
+
+
+    #forgot-password{
+      display: block;  
+      margin-left: 196.5;//188.9px;
+      text-decoration: none;
+      color: rgb(2, 82, 85);
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: sans-serif;
+      margin-bottom: 26px;
+     }      
 
     input{
               display: block;
@@ -49,16 +65,20 @@
               border-radius: 5px;
               padding-left: 5px;
           }
+
+
+    
           
     button{
               background-color: rgb(68, 116, 112);
-              box-shadow: 6px 6px 22px 5px rgb(202, 202, 202);
+              box-shadow: 6px 6px 8px 0px rgb(202, 202, 202);
               border: none;
               color: cornsilk;
               margin-left: 219px;
               width: 95px;
               height: 35px;
               font-size: 1.3rem;
+              border-radius: 5px;
               cursor: pointer;
           }      
   }

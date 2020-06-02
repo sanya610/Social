@@ -48,8 +48,25 @@
             <a href="/users/features/todo/<%=user.id%>">TODO List</a>
             <%}%>
           </p>
+
+          <p>
+            <% if(locals.user){ %>
+            <a href="/users/features/calculator">CALCULATOR</a>
+            <%}%>
+          </p>
+
+
+
       </section> 
 
 </div>
 
 <script src="/js/home_posts.js"></script>
+<script src="js/toggle_likes.js"></script>
+<script>
+  $('.toggle-like-button').each(function(){
+      let self = this;
+      let toggleLike = new ToggleLike(self);
+  });
+</script>
+

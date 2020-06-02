@@ -12,7 +12,7 @@
 
  #feed-posts
  {   
-  width: 40%;
+  width: 48%;
  }
 
  #user-features
@@ -59,9 +59,22 @@
    textarea
    {
      border: none;
-    //  background-color: rgb(240, 240, 238);
      border-bottom: 2px solid rgb(83, 80, 80);         
    }
+
+   input{
+     margin-top: 10px;
+     margin-left: 88.5px;
+     display: block;
+     width: 80px;
+     height: 30px;
+     background-color: rgb(2, 83, 79);
+     border: none;
+     color: white;
+     font-size: 1rem;
+     box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
+     font-weight: 600;
+    }
   }
 
 
@@ -84,13 +97,24 @@
 
 #user-features
 {
- text-align: center; 
+//  padding-left: 135.625px;
+ text-align: justify;
  margin-right: 2%;
  margin-left: 50px;  
  padding-right: 1%; 
  border-right: 2px solid rgba(221, 218, 218, 0.911);
  background-color: rgb(240, 240, 238);
  color: rgb(65, 64, 64);
+
+
+ h2{
+   text-align: center;
+ }
+
+ p{
+   margin-left: 38%;
+ } 
+
 
  a{
    text-decoration: none;

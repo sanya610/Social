@@ -1,14 +1,14 @@
-footer {
+.footer-display {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 10%;
+  position: sticky;
+  top: 90%;
   background-image: linear-gradient(to bottom right, #5d817e, #02393d);
-  margin: 0px; }
-  footer #footer-container {
-    float: left;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    padding: 0px 15px; }
-    footer #footer-container #footer-links {
-      padding: 19px 2rem;
-      text-decoration: none; }
+  font-family: sans-serif;
+  height: 10%; }
+  .footer-display p {
+    font-weight: 500;
+    margin-left: 50px;
+    font-size: 1.2rem;
+    margin: 12px 20px 12px 20px; }

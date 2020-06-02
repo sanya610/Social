@@ -3,15 +3,22 @@ const fs = require('fs');
 const path = require('path');
 
 
-module.exports.profile = function(req,res)
+module.exports.profile = async function(req,res)
 {
-  User.findById(req.params.id,function(err,user)
-  {
+ try{ 
+    let user = await User.findById(req.params.id);
+
     return res.render('user_profile', {
-      title: 'User Profile',
-      profile_user: user
-     });
-  })
+    title: 'User Profile',
+    profile_user: user
+  });
+  
+}catch(err)
+ {
+   console.log('Error in finding user',err);
+   req.flash('Error',err);
+ }
+
 }  
 
 

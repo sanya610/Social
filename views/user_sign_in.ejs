@@ -9,14 +9,21 @@
         <form action="/users/create-session" method="POST">
             <input type="email" id="input1" name="email" placeholder="Email" required >
             <input type="password" id="input2" name="password" placeholder="Password" required>
+            <a href="/reset_password/verify-email" id="forgot-password">Forget password?</a> 
             <button type="submit" value="Sign In">Sign In</button>
-        </form> 
+        </form>
     </div>
 
 
     <div id="google-login">
-        <a href="/users/auth/google">Google login</a> <i class="fab fa-google"></i>
+        <a href="/users/auth/google">Google-login 
+            <span> 
+                <i class="fab fa-google"></i>
+            </span>
+        </a> 
     </div>
     
+
+   
 </div>
 

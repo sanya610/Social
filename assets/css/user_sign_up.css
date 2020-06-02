@@ -1,13 +1,27 @@
 #signup {
   width: 553px;
-  height: 400px;
+  height: 450px;
   margin-left: 31%;
   background-image: linear-gradient(to right top, #75c797, #5e9597);
   border-radius: 40px;
-  margin-top: 120px; }
+  margin-top: 90px; }
   #signup h1 {
     padding-top: 10px;
     text-align: center; }
+  #signup #google-login {
+    width: 146px;
+    height: 35px;
+    padding: 5px 7px 0px 7px;
+    background-color: #447470;
+    box-shadow: 6px 6px 8px 0px #cacaca;
+    margin-left: 194.5px;
+    border-radius: 5px;
+    margin-bottom: 20px; }
+    #signup #google-login a {
+      text-decoration: none;
+      color: cornsilk;
+      font-size: 1.3rem;
+      font-family: sans-serif; }
   #signup #form-id {
     display: block; }
     #signup #form-id input {
@@ -23,8 +37,9 @@
       padding-left: 5px; }
     #signup #form-id button {
       background-color: #447470;
-      box-shadow: 6px 6px 22px 5px #cacaca;
+      box-shadow: 6px 6px 8px 0px #cacaca;
       border: none;
+      border-radius: 5px;
       color: cornsilk;
       margin-left: 219px;
       width: 95px;

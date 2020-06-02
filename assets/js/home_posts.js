@@ -28,9 +28,8 @@
  //method to create a post in DOM 
  let newPostDom = function(post)
  {
-  
       return $(`<li id="post-${post._id}">         
-      <p>
+     
      
          <small>
              <a class="delete-post-button" href="/posts/destroy/${ post._id }">x</a>  
@@ -85,5 +84,25 @@
     })
   }
 
- createPost(); 
+
+
+
+
+    // loop over all the existing posts on the page (when the window loads for the first time) and call the delete post method on delete link of each, also add AJAX (using the class we've created) to the delete button of each
+    let convertPostsToAjax = function(){
+      $('#posts-list-container>ul>li').each(function(){
+          let self = $(this);
+          let deleteButton = $(' .delete-post-button', self);
+          deletePost(deleteButton);
+
+          // get the post's id by splitting the id attribute
+          let postId = self.prop('id').split("-")[1]
+          new PostComments(postId);
+      });
+  }
+
+
+
+  createPost();
+  convertPostsToAjax();
 }

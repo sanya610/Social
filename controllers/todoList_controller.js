@@ -4,9 +4,6 @@ const Todo = require('../models/todo');
 module.exports.list = function(req,res)
 {  
     Todo.find({user: req.params.id},function(err,todolist){ 
-     console.log(req.user._id);
-     console.log(req.params.id); 
-   
      if(err) 
      {
       console.log('Error in fetching the list contents from db');
@@ -18,13 +15,10 @@ module.exports.list = function(req,res)
       list: todolist
    });
   }); 
- }
+}
 
 
  
-
-
-
 module.exports.createlist = function(req,res){
  Todo.create({
    description: req.body.description,
@@ -43,9 +37,6 @@ module.exports.createlist = function(req,res){
     return res.redirect('back');
    });
 }
-
-
-
 
 
 
