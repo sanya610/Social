@@ -1,43 +1,7 @@
 const Post = require('../models/post');
-const user=require('../models/user');
-//module.exports.home = function(req, res){
-    // console.log(req.cookies);
-    // res.cookie('user_id', 25);
+const User=require('../models/user');
 
-    // Post.find({}, function(err, posts){
-    //     return res.render('home', {
-    //         title: "Codeial | Home",
-    //         posts:  posts
-    //     });
-    // });
 
-    // populate the user of each post
-//    Post.find({})
-//    .populate('user')
-//    .populate({
-//        path: 'comments',
-//        populate: {
-//            path: 'user'
-//        }
-//    })
- //   .exec(function(err, posts){
-//
-//        user.find({},function(err,users){
-//            return res.render('home', {
-//                title: "Socio | Home",
-//                posts:  posts,
-//               all_users: users
-//            
-//        });
-//
-//        });
-//    })
-//
-//}
-
-// module.exports.actionName = function(req, res){}
-
-//another way of doing home by sing asynchronus and wait
 
 module.exports.home=async function(req,res){
 try{
@@ -50,18 +14,41 @@ try{
              path: 'user'
       }
     });
-    let users=await user.find({});
+
+    let users=await User.find({});
      
     return res.render('home',{
         title: 'social|home',
         posts: posts,
         all_users: users
     });
-    }
-    catch(err){
-        console.log('error',err);
-    }
+   }
+   catch(err){
+     console.log('error',err);
+   }
+  }
+
+
+module.exports.searchUser = async function(req,res)
+{
+  try{
+       let result= await User.find({name:{$regex : '.*'+req.body.user_friend+'.*'}});
+       
+       if(req.xhr)
+       {
+         
+         return res.status(200).json({
+          data: {
+           result: result
+        },
+         message: "search found !"
+       }); 
+      } 
+
+  }catch(err){
+    console.log('Error in searching user-controller****',err);
+    return res.redirect('back');
+  }
+
 }
-
-
 

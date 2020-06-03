@@ -6,19 +6,41 @@
 
 <div id="all-container">
 
-      <section id="user-friends">
+    <div id="user-friend-Section">
+
+      <section id="All-users">
+        <h2>Users</h2>
+        
+         <form action="/search" method="POST" id="new-search-form">
+           <input type="text" name="user_friend" placeholder="Search" required>
+           <button type="submit">  <i class="fas fa-search"></i> </button>
+         </form> 
+         
+
+         <div id="Search-container">  
+            <ul>
+  
+            </ul>      
+        </div>
+
+      </section>
+
+
+      <section id="User-friends">
         <h2>Friends</h2>
-          
+
           <% for(u of all_users){ %>
           <p>
             <a href="/users/profile/<%=u.id%>"><%= u.name %></a>
           </p>
           <% } %>      
       </section>
+    </div>    
 
-        
 
-      <section id="feed-posts"> 
+
+
+    <section id="feed-posts"> 
         <h2>Posts</h2>
 
               <% if(locals.user){ %>
@@ -38,10 +60,10 @@
                   <% } %> 
                 </ul>
           </div>
-      </section>
+    </section>
    
 
-      <section id="user-features">
+    <section id="user-features">
         <h2>Features</h2> 
           <p>
             <% if(locals.user){ %>
@@ -54,7 +76,7 @@
             <a href="/users/features/calculator">CALCULATOR</a>
             <%}%>
           </p>
-      </section> 
+    </section> 
 
 </div>
 
@@ -66,4 +88,4 @@
       let toggleLike = new ToggleLike(self);
   });
 </script>
-
+<script src="/js/search.js"></script>

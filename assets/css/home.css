@@ -3,22 +3,39 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap; }
-  #all-container #user-friends {
-    width: 20%; }
+  #all-container #user-friend-Section {
+    width: 26%; }
   #all-container #feed-posts {
     width: 48%; }
   #all-container #user-features {
     width: 20%; }
 
-#user-friends {
-  margin-left: 2%;
-  margin-right: 50px;
-  padding-left: 1%;
-  border-right: 2px solid rgba(221, 218, 218, 0.911);
-  background-color: #f0f0ee;
-  color: #414040; }
-  #user-friends a {
-    text-decoration: none; }
+#user-friend-Section {
+  display: block; }
+  #user-friend-Section #All-users {
+    height: auto;
+    margin-left: 9%;
+    padding: 7px 0px;
+    margin-right: 50px;
+    padding-left: 20px;
+    border-right: 2px solid rgba(221, 218, 218, 0.911);
+    background-color: #f0f0ee;
+    color: #414040;
+    margin-bottom: 20px; }
+    #user-friend-Section #All-users a {
+      text-decoration: none; }
+  #user-friend-Section #User-friends {
+    height: auto;
+    margin-left: 9%;
+    padding: 7px 0px;
+    margin-right: 50px;
+    padding-left: 20px;
+    border-right: 2px solid rgba(221, 218, 218, 0.911);
+    background-color: #f0f0ee;
+    color: #414040;
+    margin-bottom: 20px; }
+    #user-friend-Section #User-friends a {
+      text-decoration: none; }
 
 #feed-posts {
   display: block; }
@@ -52,6 +69,28 @@
     color: #414040; }
     #feed-posts #posts-list-container ul {
       list-style: none; }
+    #feed-posts #posts-list-container .delete-post-button {
+      float: right;
+      margin-bottom: 0px;
+      margin-top: 4px;
+      padding: 8px 25px 8px 25px;
+      background-color: #02484b;
+      box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
+      border-radius: 2px;
+      margin-right: 80px; }
+      #feed-posts #posts-list-container .delete-post-button i {
+        color: black; }
+    #feed-posts #posts-list-container .post-comments-list .delete-comment-button {
+      float: right;
+      margin-bottom: 0px;
+      margin-top: 4px;
+      margin-right: 80px;
+      padding: 8px 25px 8px 25px;
+      background-color: #00796f;
+      box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
+      border-radius: 2px; }
+      #feed-posts #posts-list-container .post-comments-list .delete-comment-button i {
+        color: black; }
 
 #user-features {
   text-align: justify;

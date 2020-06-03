@@ -3,19 +3,16 @@
 <li id="comment">
     <p>
     
+      <%= comment.content %>
+
       <% if(locals.user && locals.user.id == comment.user.id){ %>
       <small>
-             <a href="/comments/destroy/<%= comment.id %>">
+             <a href="/comments/destroy/<%= comment.id %>"  class="delete-comment-button">
               <i class="fas fa-trash-alt"></i>
             </a>
       </small> 
       <% } %>
-      
-       <%console.log(comment.user._id,'id')%>
-       <%console.log(comment.user.name,'name')%>
 
-
-      <%= comment.content %>
       <br>
       <small>
             <%= comment.user.name %>

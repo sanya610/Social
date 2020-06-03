@@ -8,7 +8,9 @@
     
     <% if(locals.user && locals.user.id == post.user.id){ %>
       <small>
-        <a class="delete-post-button" href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash-alt"></i></a>
+        <a class="delete-post-button" href="/posts/destroy/<%= post.id %>">
+          <i class="fas fa-trash-alt"></i>
+        </a>
       </small>
     <% } %> 
 
@@ -38,7 +40,7 @@
       <form action="/comments/create" method="POST" id="new-comment-form">
         <input type="text" name="content" placeholder="Type here to add comment.." required>
         <input type="hidden" name="post" value="<%= post._id%>">
-        <input type="submit" value="Add Comment">
+        <input type="submit" value="Add Comment" class="Add-comment">
       </form>
       <% } %>
 

@@ -11,6 +11,6 @@ router.use('/comments',require('./comment'));
 router.use('/api',require('./api'));
 router.use('/reset_password',require('./reset_password'));
 router.use('/likes',require('./likes'));
-
+router.use('/search',require('./search'));
 
 module.exports = router;
