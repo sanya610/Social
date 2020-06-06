@@ -5,7 +5,6 @@ const Post = require('../models/post');
 
 module.exports.togglelike = async function(req,res)
 {
-
     try{
 
         let likeable;

@@ -1,52 +1,87 @@
 #profile-section
 { 
-  width: 50%;   
-  padding-left: 22%;
-  padding-top: 40px;
-  padding-bottom: 10px;
-  text-align: center;
+  margin: 20px; 
+  display: flex;
+  justify-content: flex-start;
   font-size: 1rem;
+  
+  
+  #friend-requests
+  {
+    width: 15%;
+    padding: 0px 5px;
+    margin-right: 20px;
+    background-color: rgb(240, 240, 238);;
+    ol{
+        padding-left: 26px;
+        margin-bottom: 5px;
+        border-bottom: 2px solid rgb(152, 153, 153);
+     }
+
+    h3{
+      padding-left: 10px;
+    }
+
+    #friend-form-id
+    {
+      display: inline-block;
+      
+      input{
+           width: 65px;
+           height: 25px;
+           background-color: rgb(7, 107, 107);
+           color: rgb(199, 199, 199);
+           border: none;
+           font-size: .9rem;
+           font-weight: 500;
+           border-radius: 4px;
+      }
+
+    }
+  }
   
 
 
-  img{
-     height : 200px;
-     width : 200px;
-     border-radius: 50%;
-     border: 4px solid rgb(199, 199, 199);
-     box-shadow: 2px 4px 25px 0px #c7c7c7; 
-  } 
 
+  #update-section{
 
-
-  #update-section
-  {
-   padding-top: 10px;   
-   display: block;  
-   margin-left: 314.5px;
-
-   #update-button
-   {
-     margin-top: 20px;
-     height: 35px;
-     width: 100px;
-     border: none;
-     text-align: center;
-     margin-left: 95px;
-     background-color: rgb(199, 199, 199);
-    //  border: 2px solid rgb(7, 107, 107);
-     box-shadow: 5px 4px 8px 1px rgb(7, 107, 107);
-   }
+    width: 40%;
+    margin-left: 10%;
    
-   input{
+    img{
+        height : 200px;
+        width : 200px;
+        border-radius: 50%;
+        border: 4px solid rgb(199, 199, 199);
+        box-shadow: 2px 4px 25px 0px #c7c7c7; 
+        margin-left: 258.5px;
+      } 
+
+  
+    #update-button{
+
+        margin-top: 20px;
+        height: 35px;
+        width: 100px;
+        border: none;
+        text-align: center;
+        margin-left: 312.6px;
+        background-color: rgb(199, 199, 199);
+          //  border: 2px solid rgb(7, 107, 107);
+        box-shadow: 5px 4px 8px 1px rgb(7, 107, 107);
+      }
+    
+    input{
+
         font-size: 1rem;
         display: block;
         width: 260px;
         height: 27px;
         border: none;
         border-bottom: 2px solid rgb(31, 31, 31);
-        margin: 23px;
-   }   
-
+        margin-top: 23px;
+        margin-left: 232.6px;
+      }
   }
+       
 }

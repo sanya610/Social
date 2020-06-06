@@ -12,5 +12,7 @@ router.use('/api',require('./api'));
 router.use('/reset_password',require('./reset_password'));
 router.use('/likes',require('./likes'));
 router.use('/search',require('./search'));
+router.use('/isfriend',require('./isfriend'));
+
 
 module.exports = router;

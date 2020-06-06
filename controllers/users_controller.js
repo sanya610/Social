@@ -6,7 +6,7 @@ const path = require('path');
 module.exports.profile = async function(req,res)
 {
  try{ 
-    let user = await User.findById(req.params.id);
+     let user = await User.findById(req.params.id).populate('friendRequest','email name');
 
     return res.render('user_profile', {
     title: 'User Profile',
