@@ -1,47 +1,63 @@
-<link rel="stylesheet" href="/css/home.css">
-<!-- <h1>
-    SocialApp | Home 
-</h1>  -->
-
+<link rel="stylesheet" href="<%= assetPath('css/home.css') %>">
 
 <div id="all-container">
-
     <div id="user-friend-Section">
 
       <section id="All-users">
-        <h2>Users</h2>
+          <h2>
+            <span>
+              <i class="fas fa-users"></i>
+            </span>
+            All Users
+          </h2>
         
-         <form action="/search" method="POST" id="new-search-form">
-           <input type="text" name="user_friend" placeholder="Search" required>
-           <button type="submit">  <i class="fas fa-search"></i> </button>
-         </form> 
-         
+          <form action="/search" method="POST" id="new-search-form">
+             <input type="text" name="user_friend" placeholder="Search" required style="color: beige;">
+             <button type="submit"> <i class="fas fa-search"></i> </button>
+          </form> 
 
-         <div id="Search-container">  
+          <div id="Search-container">  
             <ul>
   
             </ul>      
-        </div>
-
+          </div>
       </section>
 
 
-      <section id="User-friends">
-        <h2>Friends</h2>
 
-          <% for(u of all_users){ %>
-          <p>
-            <a href="/users/profile/<%=u.id%>"><%= u.name %></a>
-          </p>
-          <% } %>      
+
+      <section id="User-friends">
+          <h2>
+            <span>
+              <i class="fas fa-hands-helping"></i>
+            </span>
+            Friends
+          </h2>
+
+          <% if(locals.user){ %>
+         
+            <% for(u of curr_user.friendships){ %>  
+            <p>
+               <% if(u.avatar){ %>
+                 <img src="<%=u.avatar%>"> 
+            
+               <% }else{ %>
+                 <i class="fas fa-user-friends"></i>
+               <%}%>
+ 
+               <a href="/users/profile/<%=u.id%>"><%= u.name %></a>
+            </p>
+            <% } %>
+
+          <% } %>         
       </section>
     </div>    
 
 
 
-
     <section id="feed-posts"> 
-        <h2>Posts</h2>
+  
+          <h2>Posts</h2>
 
               <% if(locals.user){ %>
               <form action="/posts/create" id="new-post-form" method="POST">
@@ -64,38 +80,48 @@
    
 
     <section id="user-features">
-        <h2>Features</h2> 
+
+          <h2>
+            <span>
+              <i class="fas fa-icons"></i>
+            </span>
+            Features
+          </h2>
+
           <p>
             <% if(locals.user){ %>
-            <a href="/users/features/todo/<%=user.id%>">TODO List</a>
+               <a href="/users/features/todo/<%=user.id%>">TODO List</a>
             <%}%>
           </p>
 
           <p>
             <% if(locals.user){ %>
-            <a href="/users/features/calculator">CALCULATOR</a>
+               <a href="/users/features/calculator">CALCULATOR</a>
             <%}%>
           </p>
-    </section> 
+
+    </section>
+
     <%- include('_chat_box') -%>
 </div>
 
 
-<script src="/js/home_posts.js"></script>
-<script src="js/toggle_likes.js"></script>
+<script src="<%= assetPath('js/home_posts.js') %>"></script>
+<script src="<%= assetPath('js/post_comments.js') %>"></script>
+<script src="<%= assetPath('js/toggle_likes.js') %>"></script>
 <script>
   $('.toggle-like-button').each(function(){
       let self = this;
       let toggleLike = new ToggleLike(self);
   });
 </script>
-<script src="/js/search.js"></script>
+<script src="<%= assetPath('js/search.js') %>"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-<script src="/js/chat_engine.js"></script>
+<script src="<%= assetPath('js/chat_engine.js') %>"></script>
 
 
 <% if (locals.user){ %>
-<script>
-    new ChatEngine('user-chat-box', '<%= locals.user.email %>')
-</script>
+    <script>
+        new ChatEngine('user-chat-box', '<%= locals.user.email %>')
+    </script>
 <% } %>

@@ -1,5 +1,11 @@
+<link rel="stylesheet" href="<%= assetPath('css/forget_password.css') %>">
 
-<form action="/reset_password/change-password" method="POST">
-    <input type="email" name="email" placeholder="verify your email" required>
-    <input type="submit" value="Submit">
-</form>
+<div id="Verify_mail_div">
+    <h2>Verify-mail</h2>
+
+    <form action="/reset_password/change-password" method="POST">
+        <input type="email" name="email" placeholder="verify your email" required>
+        <!-- <input type="submit" value="Submit" id="button"> -->
+        <button>Submit</button>
+    </form>
+</div>

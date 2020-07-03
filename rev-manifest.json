@@ -1,0 +1,23 @@
+{
+  "css/calculator.css": "css/calculator-fd31060dc9.css",
+  "css/chat_box.css": "css/chat_box-138505b75a.css",
+  "css/comment.css": "css/comment-2ac5a82568.css",
+  "css/footer.css": "css/footer-0175121b16.css",
+  "css/forget_password.css": "css/forget_password-6ef3405e2f.css",
+  "css/header.css": "css/header-09bf1088b8.css",
+  "css/home.css": "css/home-577f124bba.css",
+  "css/layout.css": "css/layout-7411b9041d.css",
+  "css/password.css": "css/password-f53941a102.css",
+  "css/post.css": "css/post-5f8b17adc1.css",
+  "css/todo.css": "css/todo-d17857a7e4.css",
+  "css/user_profile.css": "css/user_profile-ef88a57ade.css",
+  "css/user_sign_in.css": "css/user_sign_in-6c5996ecdd.css",
+  "css/user_sign_up.css": "css/user_sign_up-af5f6debbe.css",
+  "js/calculator.js": "js/calculator-1a4f2b07a7.js",
+  "js/chat_engine.js": "js/chat_engine-62f1612710.js",
+  "js/friend.js": "js/friend-020bdf1778.js",
+  "js/home_posts.js": "js/home_posts-93454d919e.js",
+  "js/post_comments.js": "js/post_comments-250181bf74.js",
+  "js/search.js": "js/search-d9e434957c.js",
+  "js/toggle_likes.js": "js/toggle_likes-6888e2eea1.js"
+}

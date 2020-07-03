@@ -1,9 +1,21 @@
-<link rel="stylesheet" href="/css/comment.css">
+<link rel="stylesheet" href="<%= assetPath('css/comment.css') %>">
 
 <li id="comment">
     <p>
     
       <%= comment.content %>
+      
+      <small id="like-comment">
+        <% if (locals.user){ %>
+          <a class="toggle-like-button" href="/likes/toggle/?id=<%= comment._id%>&type=Comment" data-likes="<%= comment.likes.length %>">
+            <%= comment.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i>
+          </a>
+         
+        <% }else{ %>
+           <%= comment.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i>
+        <% } %>
+      </small>
+
 
       <% if(locals.user && locals.user.id == comment.user.id){ %>
       <small>
@@ -17,24 +29,6 @@
       <small>
             <%= comment.user.name %>
       </small> 
-
-
-
-
-      <small>
-        <% if (locals.user){ %>
-
-          <a class="toggle-like-button" href="/likes/toggle/?id=<%= comment._id%>&type=Comment" data-likes="<%= comment.likes.length %>">
-            <!-- <i class="far fa-heart"></i>&nbsp -->
-            <%= comment.likes.length %> Likes
-          </a>
-         
-
-        <% }else{ %>
-           <!-- <i class="far fa-heart"></i>&nbsp<%= comment.likes.length %>-->
-           <%= comment.likes.length %> Likes
-        <% } %>
-      </small>
 
     </p>
 

@@ -1,3 +1,4 @@
+
 #all-container
 {
  margin-top: 30px; 
@@ -12,7 +13,7 @@
 
  #feed-posts
  {   
-  width: 48%;
+  width: 47%;
  }
 
  #user-features
@@ -21,18 +22,15 @@
  }
 }
 
-
-
 #user-friend-Section
 {  
   display: block;
 
   #All-users
   {
-     height: auto;
      margin-left: 9%;
      padding: 7px 0px;
-     margin-right: 50px;  
+     margin-right: 10%;  
      padding-left: 20px; 
      border-right: 2px solid rgba(221, 218, 218, 0.911);
      background-color: rgb(240, 240, 238);
@@ -42,25 +40,61 @@
     a{
        text-decoration: none;
      }
+
+     input{
+       width: 9vw;
+       height: 25px;
+       background-color: rgb(208, 209, 209);
+       border-radius: 4px;
+       font-size: 1rem;
+       color: white;
+       border: none;  
+     }
+
+      button{
+        height: 25px;
+        background-color: rgb(1, 138, 126);
+        border-radius: 4px;
+     }
   }  
- 
+
+  
+
   #User-friends
   {
-     height: auto;
+    
      margin-left: 9%;
      padding: 7px 0px ;
-     margin-right: 50px;  
+     margin-right: 10%;  
      padding-left: 20px; 
      border-right: 2px solid rgba(221, 218, 218, 0.911);
      background-color: rgb(240, 240, 238);
      color: rgb(65, 64, 64);
      margin-bottom: 20px;
      
+
+     img{
+        width: 26px;
+        height: 26px; 
+        margin-right: 3px; 
+        margin-top: 3px;
+     }
+
+     i{
+       width: 26px;
+       height: 26px; 
+       margin-right: 3px; 
+       margin-top: 3px; 
+      
+     }
+     
     a{
        text-decoration: none;
+       margin-bottom: 3px;
      }
   }
 }
+
 
 
 
@@ -101,71 +135,128 @@
 
 
 
-  #posts-list-container
+ #posts-list-container
  { 
   display: block;
   width: 400px;
   margin-top: 50px;
-  margin-left: 30%;
+  margin-left: 16%;
   text-align: left;
   color: rgb(65, 64, 64);
+
   
   ul{
      list-style: none;
    }
 
-
-
-  // .post-comments
-  // {
-  //   .Add-comment
-  //   {
-  //     float: right;
-  //     margin-bottom: 0px;
-  //     margin-top: 4px;
-  //     // padding: 8px 25px 8px 25px ;
-  //     background-color: rgb(2, 72, 75);
-  //     box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
-  //     border-radius: 2px;    
-  //     margin-right: 80px;
-  //   }
- 
-  // } 
-
-
   .delete-post-button
   {
      float: right;
-     margin-bottom: 0px;
-     margin-top: 4px;
+     position: relative;
      padding: 8px 25px 8px 25px ;
-     background-color: rgb(2, 72, 75);
+     background-color: rgb(46, 103, 105);
      box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
      border-radius: 2px;    
-     margin-right: 80px;
+     margin-right: 17px;
+     margin-top: 10px;
    i{
       color: black;
    }
   }
-
-  .post-comments-list
+  
+  #post-content
   {
-    .delete-comment-button
-    {
-      float: right;
-      margin-bottom: 0px;
-      margin-top: 4px;
-      margin-right: 80px;
-      padding: 8px 25px 8px 25px ;
-      background-color: rgb(0, 121, 111);
-      box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
-      border-radius: 2px;
-      i{
-        color: black;
-      }
-    }
+    font-size: 1.6rem;
   }
 
+  .main-post-div
+  {
+    margin-bottom: 20px;
+    margin-top: 56px;
+    padding: 7px;  
+
+
+    #like-post
+    {
+      width: 40px;
+      a{
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        float: right;
+        margin-right: 8px;     
+        margin-top: 14px;    
+        i{
+          color: rgb(138, 4, 4);
+          font-size: 20px;
+        }
+      }
+    }
+
+    .post-comments
+    {
+      margin-top: 25px;
+      input
+      {
+        border-radius: 4px;
+        border: none;
+        background-color: rgb(236, 229, 229);;
+        height: 24px;
+        width: 187;     
+      }
+
+
+      button
+      {
+        width: 61.67px;
+        height: 29px;
+        margin-left: 30px;
+        box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
+        border-radius: 2px;
+        border: none;
+        font-weight: 500;
+        i{
+          color: black;
+        }
+      }
+     
+    .post-comments-list
+    {
+
+      #like-comment
+      {
+        width: 40px;
+        a{
+          color: black;
+          text-decoration: none;
+          font-size: 16px;
+          float: right;
+          margin-right: 12px;     
+          margin-top: 12px;    
+          i{
+            color: rgb(138, 4, 4);
+            font-size: 14px;
+          }
+        }
+      }
+
+      .delete-comment-button
+      {
+        float: right;
+        margin-bottom: 0px;
+        margin-top: 4px;
+        margin-right: 21px;//80px;
+        padding: 8px 25px 8px 25px ;
+        background-color: rgb(0, 121, 111);
+        box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
+        border-radius: 2px;
+        i{
+          color: black;
+        }
+      }
+    }
+   }
+  }
  }   
 }
 
@@ -173,15 +264,13 @@
 
 #user-features
 {
-//  padding-left: 135.625px;
  text-align: justify;
  margin-right: 2%;
- margin-left: 50px;  
+ margin-left: 3%;  
  padding-right: 1%; 
  border-right: 2px solid rgba(221, 218, 218, 0.911);
  background-color: rgb(240, 240, 238);
  color: rgb(65, 64, 64);
-
 
  h2{
    text-align: center;
@@ -191,9 +280,7 @@
    margin-left: 38%;
  } 
 
-
  a{
    text-decoration: none;
  }
-
 }

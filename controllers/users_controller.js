@@ -6,25 +6,47 @@ const path = require('path');
 module.exports.profile = async function(req,res)
 {
  try{ 
-     let user = await User.findById(req.params.id).populate('friendRequest','email name');
+     let user = await User.findById(req.params.id).populate('friendRequest','email name').populate('friendships','email name');
 
+     let k=-1; 
+
+     for(i of user.friendships)
+     {
+       if(i.id==req.user._id)
+       {
+         k=1; 
+         break;
+       }
+     }
+
+     for(i of user.friendRequest)
+     {
+       if(i.id==req.user._id)
+       {
+         k=2; 
+         break;
+       }
+     }
+
+     if(k==-1)
+     k=0; 
+     
     return res.render('user_profile', {
     title: 'User Profile',
-    profile_user: user
+    profile_user: user,
+    k: k
   });
   
-}catch(err)
- {
+
+ }catch(err){
    console.log('Error in finding user',err);
    req.flash('Error',err);
  }
-
 }  
 
 
 module.exports.update = async function(req,res)
 {
-  
   if(req.user.id == req.params.id)
   {
    try{
@@ -32,7 +54,8 @@ module.exports.update = async function(req,res)
        let user = await User.findById(req.params.id);
 
        //update
-       User.uploadedAvatar(req,res,function(err){
+       User.uploadedAvatar(req,res,function(err)
+       {
          if(err){
            console.log('***Multer Error',err);
          }
@@ -44,11 +67,10 @@ module.exports.update = async function(req,res)
          if(req.file)
          {
 
-          if(fs.existsSync(user.avatar) && user.avatar)
+          if(user.avatar)
           {
-           //we will be deleting from path
-           fs.unlinkSync(path.join(__dirname,'..',user.avatar));
-           
+            //we will be deleting from path
+            fs.unlinkSync(path.join(__dirname,'..',user.avatar));
           } 
         
           user.avatar = User.avatarPath + '/' + req.file.filename;

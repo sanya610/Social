@@ -33,9 +33,6 @@ module.exports.verifymail = async function(req,res)
       user: user._id
     });  
 
-    console.log(change.accessToken);
-    console.log(change.isValid);
-
 
     change = await change.populate('user', 'name email').execPopulate();
 

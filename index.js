@@ -1,16 +1,18 @@
 const express = require('express');
-
+const env = require('./config/environment');
+const logger = require('morgan');
 
 const cookieParser = require('cookie-parser');
 const app = express();
-const port = 8000;
 
+
+const port = 8000;
 const expresslayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 
+require('./config/view-helpers')(app);
 //used for session cookie
 const session = require('express-session');
-
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 const passportJWT = require('./config/passport-jwt-strategy');
@@ -19,7 +21,6 @@ const passportGoogle = require('./config/passport-google-oauth2-strategy');
 
 const mongoStore = require('connect-mongo')(session);
 const sassMiddleware = require('node-sass-middleware');
-
 const flash = require('connect-flash');
 const customMiddleWare = require('./config/middleware');
 
@@ -31,16 +32,18 @@ const chatSockets = require('./config/chat_socket').chatSockets(chatServer);
 chatServer.listen(5000);
 console.log('chat server is listening on port 5000');
 
+const path = require('path');
 
-
-
-app.use(sassMiddleware({
-  src: './assets/scss',
-  dest: './assets/css',
-  debug: true,
-  outputStyle: 'extended',
-  prefix: '/css'
-}));
+if(env.name=='development')
+{
+  app.use(sassMiddleware({
+    src: path.join(__dirname, env.asset_path, 'scss'),
+    dest: path.join(__dirname, env.asset_path, 'css'),
+    debug: true,
+    outputStyle: 'extended',
+    prefix: '/css'
+  }));
+}
 
 
 //reading through post request
@@ -49,12 +52,12 @@ app.use(express.urlencoded());
 //setting up cookie parser
 app.use(cookieParser());
 
-app.use(express.static('./assets'));
-
-
+app.use(express.static(env.asset_path));
 //make the uploads path available to the browser
 app.use('/uploads',express.static(__dirname + '/uploads'));
 
+//logger
+app.use(logger(env.morgan.mode,env.morgan.options));
 
 app.use(expresslayouts);
 
@@ -71,7 +74,7 @@ app.set('views','./views');
 app.use(session({
   name: 'socialWeb',
   //TODO the change secret before deployment in production mode
-  secret: 'blahsomething',
+  secret: env.session_cookie_key,
   saveUninitialized: false,
   resave: false,
   cookie: {

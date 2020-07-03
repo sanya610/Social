@@ -1,10 +1,22 @@
 <script src="https://kit.fontawesome.com/1fea76eb58.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="<%= assetPath('css/post.css') %>">
 
 <li id="post-<%= post._id %>">         
-    
+ <div class="main-post-div">   
   <p>
-    <%= post.content %>
+    <span id="post-content"><%= post.content %></span>
+
+
+    <small id="like-post">
+      <% if (locals.user){ %>
+         <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+                 <span><%= post.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i></span>
+         </a>
+      <% }else{ %>
+          <span><%= post.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i></span> 
+      <% } %>
+    </small>
+
     
     <% if(locals.user && locals.user.id == post.user.id){ %>
       <small>
@@ -13,25 +25,16 @@
         </a>
       </small>
     <% } %> 
-
+   
     <br>
+   
+   
     <small>
       <%= post.user.name%>   
-    </small>  
-     
+    </small>    
 
     <!-- CHANGE :: display the likes of this post, if the user is logged in, then show the link to toggle likes, 
     else, just show the count -->
-
-    <small>
-      <% if (locals.user){ %>
-          <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
-                  <%= post.likes.length %> Likes
-          </a>
-      <% }else{ %>
-          <%= post.likes.length %> <b>Likes</b> 
-      <% } %>
-  </small> 
   </p>
      
 
@@ -40,7 +43,12 @@
       <form action="/comments/create" method="POST" id="new-comment-form">
         <input type="text" name="content" placeholder="Type here to add comment.." required>
         <input type="hidden" name="post" value="<%= post._id%>">
-        <input type="submit" value="Add Comment" class="Add-comment">
+        <button type="submit" class="Add-comment">
+          Add
+          <span>
+            <i class="far fa-comment"></i>
+          </span>
+        </button>
       </form>
       <% } %>
 
@@ -55,4 +63,5 @@
     </div> 
 
     </div>
+  </div>
  </li> 

@@ -1,0 +1,54 @@
+#container-div
+{
+ width: 500px;
+ height: 700px;
+ position: relative;
+ margin: auto;
+ margin-top: 75px;
+}
+
+table{
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px 5px rgb(110, 100, 100);
+}
+
+tr
+{
+ width: 400px;   
+ background-color: rgb(230, 230, 224);
+}
+
+td
+{
+ width: 102px;   
+ height: 80px;
+ text-align: center;
+ font-size: 2rem;
+ cursor: pointer; 
+}
+
+#row1
+{
+ text-transform: uppercase;   
+ background-color: rgba(0, 0, 0, 0.89);
+ color: cornsilk;
+}
+
+
+#row2
+{  
+ background-color: rgba(78, 139, 155, 0.89);
+}
+
+
+#display
+{
+ text-align: right;
+ padding-right: 30px; 
+}
+
+#last-col
+{
+ background-color: rgba(12, 95, 116, 0.89);   
+ color: cornsilk;
+}

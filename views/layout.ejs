@@ -9,9 +9,11 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 
-        <link rel="stylesheet" href="/css/layout.css"> 
-        <link rel="stylesheet" href="/css/header.css">
-        <link rel="stylesheet" href="/css/footer.css">
+        <script src="https://kit.fontawesome.com/1fea76eb58.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="<%=assetPath('css/layout.css')%>">
+        <link rel="stylesheet" href="<%= assetPath('css/header.css') %>">
+        <link rel="stylesheet" href="<%= assetPath('css/footer.css') %>">
 
         <%- style %>
     </head>
@@ -24,7 +26,7 @@
               <%= flash.success %>
            </h5>  
         <% } %> -->
-
+              
 
         <main id="layout-main">  
           <%- body %>
@@ -70,3 +72,4 @@
     </body>
 
 </html>
+
