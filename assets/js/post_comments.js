@@ -4,10 +4,12 @@
 // 1. When the page loads
 // 2. Creation of every post dynamically via AJAX
 
+
+
 class PostComments
 {
     // constructor is used to initialize the instance of the class whenever a new instance is created
-    constructor(postId){
+        constructor(postId){
         this.postId = postId;
         this.postContainer = $(`#post-${postId}`);
         this.newCommentForm = $(`#post-${postId}-comments-form`);
@@ -16,7 +18,7 @@ class PostComments
 
         let self = this;
         // call for all the existing comments
-        $(' .delete-comment-button', this.postContainer).each(function(){
+        $('.delete-comment-button', this.postContainer).each(function(){
             self.deleteComment($(this));
         });
     }
@@ -50,30 +52,40 @@ class PostComments
                     console.log(error.responseText);
                 }
             });
-
-
         });
     }
 
 
     newCommentDom(comment){
-        // I've added a class 'delete-comment-button' to the delete comment link and also id to the comment's li
-        return $(`<li id="comment-${ comment._id }">
-                        <p>
+        return $(`<li id="comment-${comment._id}">
+                    <p>
+                        <span id="comment-content" style="font-size: 1.3rem;">${comment.content}</span> 
                             
-                            <small>
-                                <a class="delete-comment-button" href="/comments/destroy/${comment._id}">X</a>
-                            </small>
-                            
-                            ${comment.content}
-                            <br>
-                            <small>
-                                ${comment.user.name}
-                            </small>
-                        </p>    
+                        <small id="like-comment">
+                            <a class="toggle-like-button" href="/likes/toggle/?id=${comment._id}&type=Comment" data-likes="${comment.likes.length}"  data-id="${comment._id}" >
+                                  <span id="toggle-i-${comment._id}">
+                                        ${comment.likes.length} &nbsp&nbsp<i class="far fa-heart"></i>
+                                  </span>      
+                            </a> 
+                        </small>
+                    
+                    
+                        <small>
+                            <a href="/comments/destroy/${comment._id}"  class="delete-comment-button">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </small> 
+                    
+                    
+                        <br>
+                        <small style="color: dimgray;">
+                            ${comment.user.name}  
+                        </small> 
+                    </p>
 
                 </li>`);
     }
+
 
 
     deleteComment(deleteLink){

@@ -5,7 +5,7 @@
  display: flex;
  justify-content: flex-start;
  flex-wrap: wrap;
- 
+
  #user-friend-Section
  {   
   width: 26%;   
@@ -22,19 +22,19 @@
  }
 }
 
+
+
+
 #user-friend-Section
 {  
-  display: block;
-
+  display: block;  
   #All-users
   {
      margin-left: 9%;
      padding: 7px 0px;
      margin-right: 10%;  
      padding-left: 20px; 
-     border-right: 2px solid rgba(221, 218, 218, 0.911);
-     background-color: rgb(240, 240, 238);
-     color: rgb(65, 64, 64);
+     color: rgb(19, 18, 18);
      margin-bottom: 20px;
 
     a{
@@ -44,11 +44,11 @@
      input{
        width: 9vw;
        height: 25px;
-       background-color: rgb(208, 209, 209);
-       border-radius: 4px;
+       border: none; 
+       border-bottom: 2px solid black;
        font-size: 1rem;
-       color: white;
-       border: none;  
+       color: rgb(12, 11, 11);
+        
      }
 
       button{
@@ -60,19 +60,16 @@
 
   
 
+
   #User-friends
-  {
-    
+  {  
      margin-left: 9%;
      padding: 7px 0px ;
      margin-right: 10%;  
      padding-left: 20px; 
-     border-right: 2px solid rgba(221, 218, 218, 0.911);
-     background-color: rgb(240, 240, 238);
      color: rgb(65, 64, 64);
      margin-bottom: 20px;
      
-
      img{
         width: 26px;
         height: 26px; 
@@ -84,8 +81,7 @@
        width: 26px;
        height: 26px; 
        margin-right: 3px; 
-       margin-top: 3px; 
-      
+       margin-top: 3px;    
      }
      
     a{
@@ -153,75 +149,93 @@
   {
      float: right;
      position: relative;
-     padding: 8px 25px 8px 25px ;
-     background-color: rgb(46, 103, 105);
+     padding: 5px 13px;
+     border: 3px solid darkslategray;
+     background-color: rgb(239, 239, 239);
      box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
      border-radius: 2px;    
-     margin-right: 17px;
-     margin-top: 10px;
+     margin-top: -46px;
+     margin-right: -15px;
    i{
       color: black;
+      font-size: 14px;
    }
   }
   
+
   #post-content
   {
     font-size: 1.6rem;
+    color: black;
   }
+
 
   .main-post-div
   {
     margin-bottom: 20px;
     margin-top: 56px;
     padding: 7px;  
-
-
+    
     #like-post
     {
       width: 40px;
       a{
         color: black;
+        border-radius: 2px;
+        padding: 0px 1px;
+        box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
+        border: 3px solid darkslategray;
+        background-color: rgb(239, 239, 239);
+        position: relative;
         text-decoration: none;
         font-size: 20px;
-        float: right;
-        margin-right: 8px;     
-        margin-top: 14px;    
+        float: right;     
+        margin-right: 41px;
+        margin-top: -46px;    
         i{
           color: rgb(138, 4, 4);
-          font-size: 20px;
+          font-size: 18px;
         }
       }
     }
+
+
 
     .post-comments
     {
       margin-top: 25px;
       input
       {
-        border-radius: 4px;
         border: none;
-        background-color: rgb(236, 229, 229);;
+        border-bottom: 2px solid black;
         height: 24px;
-        width: 187;     
+        width: 170px;     
       }
-
 
       button
       {
-        width: 61.67px;
+        width: 41.67px;
         height: 29px;
         margin-left: 30px;
         box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
+        background-color: rgb(239, 239, 239);
+        border: 3px solid darkslategray;
         border-radius: 2px;
-        border: none;
         font-weight: 500;
         i{
           color: black;
+          font-size: 18px;
         }
       }
      
-    .post-comments-list
-    {
+
+     .post-comments-list{
+     
+      #comment-content
+      {
+        font-size: 1rem;
+        color: black;
+      }
 
       #like-comment
       {
@@ -230,9 +244,14 @@
           color: black;
           text-decoration: none;
           font-size: 16px;
+          padding: 6px 15px;
+          border-radius: 4px;
+          // background-color: rgb(97, 172, 153);
+          background-color: rgb(239, 239, 239);
+          box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
           float: right;
-          margin-right: 12px;     
-          margin-top: 12px;    
+          margin-right: 3px;     
+          margin-top: 4px;    
           i{
             color: rgb(138, 4, 4);
             font-size: 14px;
@@ -240,12 +259,13 @@
         }
       }
 
+    
       .delete-comment-button
       {
         float: right;
         margin-bottom: 0px;
         margin-top: 4px;
-        margin-right: 21px;//80px;
+        margin-right: 15px;
         padding: 8px 25px 8px 25px ;
         background-color: rgb(0, 121, 111);
         box-shadow: 2px 2px 3px 1px rgba(71, 70, 70, 0.911);
@@ -268,8 +288,8 @@
  margin-right: 2%;
  margin-left: 3%;  
  padding-right: 1%; 
- border-right: 2px solid rgba(221, 218, 218, 0.911);
- background-color: rgb(240, 240, 238);
+//  border-right: 2px solid rgba(221, 218, 218, 0.911);
+//  background-color: rgb(240, 240, 238);
  color: rgb(65, 64, 64);
 
  h2{

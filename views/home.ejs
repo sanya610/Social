@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<%= assetPath('css/home.css') %>">
 
 <div id="all-container">
+
     <div id="user-friend-Section">
 
       <section id="All-users">
@@ -12,7 +13,7 @@
           </h2>
         
           <form action="/search" method="POST" id="new-search-form">
-             <input type="text" name="user_friend" placeholder="Search" required style="color: beige;">
+             <input type="text" name="user_friend" placeholder="Search" required style="color: rgb(5, 5, 5); padding-left: 10px;">
              <button type="submit"> <i class="fas fa-search"></i> </button>
           </form> 
 
@@ -35,12 +36,11 @@
           </h2>
 
           <% if(locals.user){ %>
-         
             <% for(u of curr_user.friendships){ %>  
             <p>
                <% if(u.avatar){ %>
                  <img src="<%=u.avatar%>"> 
-            
+
                <% }else{ %>
                  <i class="fas fa-user-friends"></i>
                <%}%>
@@ -51,6 +51,7 @@
 
           <% } %>         
       </section>
+    
     </div>    
 
 
@@ -80,7 +81,6 @@
    
 
     <section id="user-features">
-
           <h2>
             <span>
               <i class="fas fa-icons"></i>
@@ -99,26 +99,26 @@
                <a href="/users/features/calculator">CALCULATOR</a>
             <%}%>
           </p>
-
     </section>
 
     <%- include('_chat_box') -%>
 </div>
 
-
-<script src="<%= assetPath('js/home_posts.js') %>"></script>
 <script src="<%= assetPath('js/post_comments.js') %>"></script>
+<script src="<%= assetPath('js/home_posts.js') %>"></script>
+
 <script src="<%= assetPath('js/toggle_likes.js') %>"></script>
+
 <script>
   $('.toggle-like-button').each(function(){
       let self = this;
       let toggleLike = new ToggleLike(self);
   });
 </script>
+
 <script src="<%= assetPath('js/search.js') %>"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script src="<%= assetPath('js/chat_engine.js') %>"></script>
-
 
 <% if (locals.user){ %>
     <script>

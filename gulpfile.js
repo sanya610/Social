@@ -24,8 +24,8 @@ gulp.task('css', function(done){
        }))
        .pipe(gulp.dest('./public/assets'));
        done();
-   
    })
+   
    
    gulp.task('js', function(done){
        console.log('minifying js...');

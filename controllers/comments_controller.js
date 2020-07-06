@@ -24,15 +24,13 @@ module.exports.create = async function(req,res)
           
                                            //field
           comment = await comment.populate('user', 'name email').execPopulate();
-          // commentsMailer.newComment(comment);
-          
           
           let job = queue.create('emails',comment).save(function(err){
           if(err){
             console.log('Error in creating a queue');
             return;
           } 
-          console.log('job enqueued !',job.id);
+            console.log('job enqueued !',job.id);
          });
 
 

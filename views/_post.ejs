@@ -4,53 +4,59 @@
 <li id="post-<%= post._id %>">         
  <div class="main-post-div">   
   <p>
-    <span id="post-content"><%= post.content %></span>
+     <span id="post-content"><%= post.content %></span>
+     <br>
 
-
-    <small id="like-post">
-      <% if (locals.user){ %>
-         <a class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
-                 <span><%= post.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i></span>
-         </a>
-      <% }else{ %>
-          <span><%= post.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i></span> 
-      <% } %>
-    </small>
-
-    
-    <% if(locals.user && locals.user.id == post.user.id){ %>
-      <small>
-        <a class="delete-post-button" href="/posts/destroy/<%= post.id %>">
-          <i class="fas fa-trash-alt"></i>
-        </a>
-      </small>
-    <% } %> 
-   
-    <br>
-   
-   
-    <small>
-      <%= post.user.name%>   
-    </small>    
-
-    <!-- CHANGE :: display the likes of this post, if the user is logged in, then show the link to toggle likes, 
-    else, just show the count -->
+     <small style="color: dimgray;">
+          <%= post.user.name%> 
+     </small> 
   </p>
      
 
     <div class="post-comments">
       <% if(locals.user){ %>
-      <form action="/comments/create" method="POST" id="new-comment-form">
+      <form action="/comments/create" method="POST" id="post-<%= post._id %>-comments-form">
         <input type="text" name="content" placeholder="Type here to add comment.." required>
         <input type="hidden" name="post" value="<%= post._id%>">
         <button type="submit" class="Add-comment">
-          Add
-          <span>
+          <!-- Add -->
+          <!-- <span> -->
             <i class="far fa-comment"></i>
-          </span>
+          <!-- </span> -->
         </button>
       </form>
       <% } %>
+
+
+      <!-- I don't know sometimes css of my code stops working like it did few moments earlier...it is simply somtimes mismatch occurs int he manifest file..issue with 
+      i got ur actual problem..basically u are running a looop for all the post so this sapn is prresent in all the posts but id should be unique to a component it should not repeat
+    I tried acces i class using a tag but it didn't work// is it normal if my all css vanishes on running gulp build command...vanishes?? yeah all styling was not working..may be u are not saving let me show you // -->
+      
+      <!-- like post -->
+      <small id="like-post">
+        <% if (locals.user){ %>
+           <a class="toggle-like-button" data-id="<%=post._id%>" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+                   <span id="toggle-i-<%=post._id%>"><%= post.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i></span>
+           </a>
+        <% }else{ %>
+            <span><%= post.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i></span> 
+        <% } %>
+      </small>
+
+
+
+      <!-- delete button -->
+      <% if(locals.user && locals.user.id == post.user.id){ %>
+      <span>  
+        <small>
+          <a class="delete-post-button" href="/posts/destroy/<%= post._id %>">
+            <i class="fas fa-trash-alt"></i>
+          </a>
+        </small>
+      </span>  
+      <% } %>
+
+
 
     <div class="post-comments-list">
       <ul id="post-comments-<%= post._id %>">

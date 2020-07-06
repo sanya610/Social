@@ -16,19 +16,40 @@ class ToggleLike{
                 type: 'POST',
                 url: $(self).attr('href'),
             })
+
             .done(function(data) {
                 let likesCount = parseInt($(self).attr('data-likes'));
-                console.log(likesCount);
+                let id=$(self).attr("data-id");
+
                 if (data.data.deleted == true){
                     likesCount -= 1;
+                    // var elem = document.getElementById('toggle-i');
+                    // var x = elem.querySelector('i');
+                    // x.classList.remove('fas');
+                    // x.classList.add('far');
+                    $(self).html(`<span id="toggle-i-${id}">${likesCount}&nbsp;&nbsp;<i class="far fa-heart"></span>`);
                     
                 }else{
                     likesCount += 1;
+
+                    // var elem = document.getElementById(`toggle-i-${id}`); 
+                    // //toggle-i wali span nhi hai
+                    // var x = elem.querySelector('i');
+
+                    // x.classList.remove('far');
+                    // x.classList.remove('fa-heart');
+
+                    // //may be its occuring because of the order in which classes should be used 
+                    // // no its not the reason//okay//do you get any output no
+                    // x.classList.add('fas');
+                    // x.classList.add('fa-heart');
+                    // console.log('x',x);
+                    //
+                    $(self).html(`<span id="toggle-i-${id}">${likesCount}&nbsp;&nbsp;<i class="fas fa-heart"></span>`);
+
                 }
 
-
                 $(self).attr('data-likes', likesCount);
-                $(self).html(`${likesCount} Likes`);
 
             })
             .fail(function(errData) {
@@ -39,3 +60,14 @@ class ToggleLike{
         });
     }
 }
+
+
+
+
+
+
+
+
+
+
+

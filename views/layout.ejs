@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-          <%=title%>
+          <%= title %>
         </title>
                 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
@@ -11,7 +11,7 @@
 
         <script src="https://kit.fontawesome.com/1fea76eb58.js" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="<%=assetPath('css/layout.css')%>">
+        <link rel="stylesheet" href="<%= assetPath('css/layout.css')%>">
         <link rel="stylesheet" href="<%= assetPath('css/header.css') %>">
         <link rel="stylesheet" href="<%= assetPath('css/footer.css') %>">
 
@@ -21,13 +21,6 @@
     <body>
         <%- include('_header'); %>
 
-        <!-- <% if(flash.success && flash.success.length>0){ %>
-           <h5>
-              <%= flash.success %>
-           </h5>  
-        <% } %> -->
-              
-
         <main id="layout-main">  
           <%- body %>
         </main>
@@ -36,9 +29,8 @@
         
         <%- script %>
         
-        
         <script>
-               <% if(flash.success && flash.success.length>0){ %>
+               <% if (flash.success && flash.success.length > 0) {%>
                   
                   new Noty({
 
@@ -63,9 +55,7 @@
                      timeout: 1000
                   
                    }).show();
-
                <% } %>
-
         </script>
 
 

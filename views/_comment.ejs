@@ -1,34 +1,41 @@
 <link rel="stylesheet" href="<%= assetPath('css/comment.css') %>">
 
-<li id="comment">
+<li id="comment-<%=comment._id%>">
     <p>
-    
-      <%= comment.content %>
-      
+
+      <span id="comment-content" style="font-size: 1.3rem;"><%= comment.content %></span> 
+
       <small id="like-comment">
+
         <% if (locals.user){ %>
-          <a class="toggle-like-button" href="/likes/toggle/?id=<%= comment._id%>&type=Comment" data-likes="<%= comment.likes.length %>">
-            <%= comment.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i>
+
+          <a class="toggle-like-button" data-id="<%=comment._id%>" href="/likes/toggle/?id=<%= comment._id%>&type=Comment" data-likes="<%= comment.likes.length %>">
+              <span id="toggle-i-<%=comment._id%>">
+                  <%= comment.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i>
+              </span>
           </a>
          
-        <% }else{ %>
-           <%= comment.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i>
+        <% }else{ %>       
+          <%= comment.likes.length %>&nbsp&nbsp<i class="far fa-heart"></i>
         <% } %>
+
       </small>
 
 
+
       <% if(locals.user && locals.user.id == comment.user.id){ %>
-      <small>
-             <a href="/comments/destroy/<%= comment.id %>"  class="delete-comment-button">
-              <i class="fas fa-trash-alt"></i>
+        <small>
+            <a href="/comments/destroy/<%= comment._id %>"  class="delete-comment-button">
+                <i class="fas fa-trash-alt"></i>
             </a>
-      </small> 
+        </small> 
       <% } %>
 
+      
       <br>
-      <small>
-            <%= comment.user.name %>
-      </small> 
+      <small style="color: dimgray;">
+           <%= comment.user.name %>  
+      </small>  
 
     </p>
 
