@@ -2,7 +2,12 @@
 <link rel="stylesheet" href="<%= assetPath('css/post.css') %>">
 
 <li id="post-<%= post._id %>">         
- <div class="main-post-div">   
+ <div class="main-post-div">
+
+  <% if(post.pic){ %>
+    <img src="<%= post.pic %>">
+  <% } %>
+
   <p>
      <span id="post-content"><%= post.content %></span>
      <br>
@@ -19,18 +24,11 @@
         <input type="text" name="content" placeholder="Type here to add comment.." required>
         <input type="hidden" name="post" value="<%= post._id%>">
         <button type="submit" class="Add-comment">
-          <!-- Add -->
-          <!-- <span> -->
             <i class="far fa-comment"></i>
-          <!-- </span> -->
         </button>
       </form>
       <% } %>
 
-
-      <!-- I don't know sometimes css of my code stops working like it did few moments earlier...it is simply somtimes mismatch occurs int he manifest file..issue with 
-      i got ur actual problem..basically u are running a looop for all the post so this sapn is prresent in all the posts but id should be unique to a component it should not repeat
-    I tried acces i class using a tag but it didn't work// is it normal if my all css vanishes on running gulp build command...vanishes?? yeah all styling was not working..may be u are not saving let me show you // -->
       
       <!-- like post -->
       <small id="like-post">

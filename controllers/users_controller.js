@@ -7,7 +7,6 @@ module.exports.profile = async function(req,res)
 {
  try{ 
      let user = await User.findById(req.params.id).populate('friendRequest','email name').populate('friendships','email name');
-
      let k=-1; 
 
      for(i of user.friendships)
@@ -37,12 +36,12 @@ module.exports.profile = async function(req,res)
     k: k
   });
   
-
  }catch(err){
    console.log('Error in finding user',err);
    req.flash('Error',err);
  }
 }  
+
 
 
 module.exports.update = async function(req,res)
@@ -66,26 +65,21 @@ module.exports.update = async function(req,res)
          //this is saving the path of uploaded file into the avatar field in the user
          if(req.file)
          {
-
-          if(user.avatar)
-          {
+          if(user.avatar){
             //we will be deleting from path
             fs.unlinkSync(path.join(__dirname,'..',user.avatar));
           } 
-        
           user.avatar = User.avatarPath + '/' + req.file.filename;
-          
          }
 
          user.save();
          return res.redirect('back'); 
        });
 
-      }catch(err)
-      {
-       req.flash('Error',err);
-       return res.redirect('back'); 
-      }  
+    }catch(err){
+      req.flash('Error',err);
+      return res.redirect('back'); 
+    }  
   
   }else{
     req.flash('Error','Unauthorized!');
@@ -120,7 +114,7 @@ module.exports.signIn = function(req,res)
   return res.render('user_sign_in',
   {
    title: 'SocialApp | Sign-In' 
-  }) 
+  }); 
 }
 
 
@@ -128,33 +122,34 @@ module.exports.signIn = function(req,res)
 // get the sign up data
 module.exports.create = function(req,res)
 {
- if(req.body.password!=req.body.confirm_password)
- {
-  return res.redirect('back'); 
- }
- 
- User.findOne({email : req.body.email},function(err,user)
- {
-  if(err)
+  if(req.body.password!=req.body.confirm_password)
   {
-   console.log('Error in finding user in Signing up');
-   return; 
-  } 
-
-  if(!user){
-   User.create(req.body,function(err,user)
-   {
-    if(err)
-    {
-     console.log('Error in creating user while signing up');
-     return; 
-    }
-     return res.redirect('/users/sign-in'); 
-   }) 
-  }else{
     return res.redirect('back'); 
   }
- })
+ 
+  User.findOne({email : req.body.email},function(err,user)
+  {
+    if(err)
+    {
+      console.log('Error in finding user in Signing up');
+      return; 
+    } 
+
+    if(!user){
+      User.create(req.body,function(err,user)
+      {
+        if(err)
+        {
+          console.log('Error in creating user while signing up');
+          return; 
+        }  
+        return res.redirect('/users/sign-in'); 
+      }) 
+
+    }else{
+      return res.redirect('back'); 
+    }
+  })
 }
 
 
@@ -163,7 +158,6 @@ module.exports.create = function(req,res)
 module.exports.createSession = function(req,res)
 {
  req.flash('success', 'Logged in successfully');
- 
  return res.redirect('/');
 }
 
@@ -172,9 +166,7 @@ module.exports.createSession = function(req,res)
 module.exports.destroySession = function(req,res)
 {
  req.logout();
- 
  req.flash('success','You have logged out');
-
  return res.redirect('/');
 }
 

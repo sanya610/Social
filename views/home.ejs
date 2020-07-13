@@ -30,25 +30,29 @@
       <section id="User-friends">
           <h2>
             <span>
-              <i class="fas fa-hands-helping"></i>
+              <i class="fas fa-handshake"></i>
             </span>
             Friends
           </h2>
 
           <% if(locals.user){ %>
+          <ul> 
             <% for(u of curr_user.friendships){ %>  
-            <p>
-               <% if(u.avatar){ %>
-                 <img src="<%=u.avatar%>"> 
+            <li>
+               <p>
+                  <% if(u.avatar){ %>
+                  <img src="<%=u.avatar%>"> 
 
-               <% }else{ %>
-                 <i class="fas fa-user-friends"></i>
-               <%}%>
+                  <% }else{ %>
+                    <i class="fas fa-user-friends"></i>
+                  <%}%>
  
-               <a href="/users/profile/<%=u.id%>"><%= u.name %></a>
-            </p>
+                  <a href="/users/profile/<%=u.id%>"><%= u.name %></a>
+               </p>
+            </li>
             <% } %>
-
+          
+          </ul>  
           <% } %>         
       </section>
     
@@ -58,14 +62,21 @@
 
     <section id="feed-posts"> 
   
-          <h2>Posts</h2>
+          <p id="post-heading">
+            <span>
+              <i  class="far fa-list-alt"></i>
+            </span>
+            Posts
+          </p>
+          
 
-              <% if(locals.user){ %>
-              <form action="/posts/create" id="new-post-form" method="POST">
-                  <textarea name="content" cols="30" rows="3" placeholder="Type Here" required></textarea>
-                  <input type="submit" value="Post">   
-              </form>
-              <% } %> 
+            <% if(locals.user){ %>
+            <form action="/posts/create" id="new-post-form" method="POST" enctype="multipart/form-data">
+                <textarea name="content" cols="30" rows="3" placeholder="Type Here" required></textarea>
+                <input type="file" name="pic" placeholder="Add pic" id="post-pic">
+                <button type="submit">Post</button>   
+            </form>
+            <% } %> 
           
       
           <div id="posts-list-container">
@@ -90,13 +101,25 @@
 
           <p>
             <% if(locals.user){ %>
-               <a href="/users/features/todo/<%=user.id%>">TODO List</a>
+               <a href="/users/features/todo/<%=user.id%>">
+                   <i class="fas fa-tasks"></i> 
+                  
+                   <span>
+                       TODO List
+                   </span>
+               </a>
             <%}%>
           </p>
 
+
           <p>
             <% if(locals.user){ %>
-               <a href="/users/features/calculator">CALCULATOR</a>
+               <a href="/users/features/calculator">
+                <i class="fas fa-calculator"></i>
+                  <span>
+                      CALCULATOR
+                  </span>
+              </a>
             <%}%>
           </p>
     </section>
@@ -104,8 +127,10 @@
     <%- include('_chat_box') -%>
 </div>
 
-<script src="<%= assetPath('js/post_comments.js') %>"></script>
-<script src="<%= assetPath('js/home_posts.js') %>"></script>
+
+
+<script src="<%= assetPath('js/post_comments.js') %>"></script> 
+<script src="<%= assetPath('js/home_posts.js') %>"></script> 
 
 <script src="<%= assetPath('js/toggle_likes.js') %>"></script>
 
@@ -125,3 +150,15 @@
         new ChatEngine('user-chat-box', '<%= locals.user.email %>')
     </script>
 <% } %>
+
+
+
+
+
+
+
+<!-- sudo fuser -k 8000/tcp   for killing the process at a particular port
+rm -rf social                 this will be used to delete the folder -->
+
+
+

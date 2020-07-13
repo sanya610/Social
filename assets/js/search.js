@@ -14,10 +14,8 @@
          success: function(data)
          {
            $('#Search-container>ul').empty();
-           console.log('HEllo',data.data.result);
 
            for(i of data.data.result){ 
-
               let newSearch = newSearchDom(i);
               $('#Search-container>ul').prepend(newSearch); 
            }
@@ -30,19 +28,33 @@
      });
     }
      
+
+
     //method to create a post in DOM 
     let newSearchDom = function(search)
-    {
-         return $(`       
-                      <li>   
-                         <p>
-                             <a href="/users/profile/${search._id}">${search.name}</a> 
-                         </p>
-                      </li>  
-         
-        `)
+    { 
+         if(search.avatar)
+         {
+          return $(`<li>
+                      <p>
+                        <img src="${search.avatar}" style="width: 25px; height: 25px; border-radius: 4px;">  
+                        <a href="/users/profile/${search._id}" style="color: black;">${search.name}</a> 
+                      </p>
+                  </li>  
+            `)
+         }
+         else
+         {
+          return $(`<li>
+                      <p>
+                        <i class="fas fa-user-friends"  style="font-size: 20px; border-radius: 4px;"></i>
+                        <a href="/users/profile/${search._id}" style="color: black;">${search.name}</a> 
+                      </p>
+                  </li>  
+            `)
+         }    
     }
    
 
-   createSearch();
+  createSearch();
 }

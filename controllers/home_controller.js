@@ -37,6 +37,8 @@ module.exports.searchUser = async function(req,res)
   try{
        let result= await User.find({name:{$regex : '.*'+req.body.user_friend+'.*'}});
        
+       console.log(result); 
+
        if(req.xhr)
        {
          return res.status(200).json({

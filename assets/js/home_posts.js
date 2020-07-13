@@ -3,23 +3,37 @@
  let createPost = function()
  {
     let newPostForm = $('#new-post-form');
-  
+
+    let plain_form = document.querySelector('#new-post-form');
+
     newPostForm.submit(function(e){
+      console.log('hello rishabh');
     e.preventDefault();
+
+    formData = new FormData(plain_form);
     
     $.ajax({
       type: 'post',
       url : '/posts/create',
-      data: newPostForm.serialize(),
+      processData: false,
+      contentType: false,
+      data: formData,
+      // data: newPostForm.serialize(),
 
       success: function(data)
       {
+        console.log('hello rishabh');
+        $('#new-post-form textarea').val('');
+         $('#new-post-form input#post-pic').val('');
+
         let newPost = newPostDom(data.data.post);
         $('#posts-list-container>ul').prepend(newPost); 
         deletePost($(` .delete-post-button`,newPost));
 
         // call the create comment class
         new PostComments(data.data.post._id);
+
+        new ToggleLike($(' .toggle-like-button', newPost));
 
         new Noty({
             theme: 'relax',
@@ -41,17 +55,23 @@
  //method to create a post in DOM 
  let newPostDom = function(post)
  {
-      return $(`<li id="post-${post._id}">         
-      <div class="main-post-div">   
-      <p>
-         <span id="post-content">${post.content}</span>
-         <br>
-         <small>
-           ${post.user.name}   
-         </small> 
-      </p>
-         
-    
+   if(post.pic)
+   {
+    console.log('found pic');  
+
+    return $(`<li id="post-${post._id}">               
+      <div class="main-post-div">  
+
+        <img src="${post.pic}">
+        <p>
+          <span id="post-content">${post.content}</span>
+          <br>
+          <small>
+            ${post.user.name}   
+          </small> 
+        </p>
+       
+  
         <div class="post-comments">
 
           <form action="/comments/create" method="POST" id="new-comment-form">
@@ -59,48 +79,102 @@
             <input type="hidden" name="post" value="${post._id}">
             
             <button type="submit" class="Add-comment">
-              Add
-              <span>
                 <i class="far fa-comment"></i>
-              </span>
             </button>  
           </form>
           
 
           <small id="like-post">
-               <a class="toggle-like-button" data-id="${post._id}" data-likes="${post.likes.length}" href="/likes/toggle/?id=${post._id}&type=Post">
+              <a class="toggle-like-button" data-id="${post._id}" data-likes="${post.likes.length}" href="/likes/toggle/?id=${post._id}&type=Post">
                       <span id="toggle-i-${post._id}">
                           ${post.likes.length}&nbsp&nbsp<i class="far fa-heart"></i>
                       </span>
-               </a>
+              </a>
           </small>
-  
-         
+
+        
           <span>  
             <small>
               <a class="delete-post-button" href="/posts/destroy/${post._id}">
-                 <i class="fas fa-trash-alt"></i>
+                <i class="fas fa-trash-alt"></i>
               </a>
             </small>
           </span>  
     
     
-    
+  
           <div class="post-comments-list">
             <ul id="post-comments-${post._id}">
       
             </ul>
           </div> 
     
-        
-       </div>
-       </div>
-    
+      
+        </div>
+      </div>
+
     </li>`)
+   } 
+
+   else{
+   console.log('couldnt found pic');  
+    return $(`<li id="post-${post._id}">               
+      <div class="main-post-div">  
+
+        <p>
+          <span id="post-content">${post.content}</span>
+          <br>
+          <small>
+            ${post.user.name}   
+          </small> 
+        </p>
+     
+
+        <div class="post-comments">
+
+          <form action="/comments/create" method="POST" id="new-comment-form">
+            <input type="text" name="content" placeholder="Type here to add comment.." required>
+            <input type="hidden" name="post" value="${post._id}">
+            
+            <button type="submit" class="Add-comment">
+                <i class="far fa-comment"></i>
+            </button>  
+          </form>
+          
+
+          <small id="like-post">
+              <a class="toggle-like-button" data-id="${post._id}" data-likes="${post.likes.length}" href="/likes/toggle/?id=${post._id}&type=Post">
+                      <span id="toggle-i-${post._id}">
+                          ${post.likes.length}&nbsp&nbsp<i class="far fa-heart"></i>
+                      </span>
+              </a>
+          </small>
+
+      
+          <span>  
+            <small>
+              <a class="delete-post-button" href="/posts/destroy/${post._id}">
+                <i class="fas fa-trash-alt"></i>
+              </a>
+            </small>
+          </span>  
+    
+  
+
+          <div class="post-comments-list">
+            <ul id="post-comments-${post._id}">
+      
+            </ul>
+          </div> 
+    
+    
+        </div>
+      </div>
+    </li>`)
+   }
  }
 
 
- 
   //method to delete a post from DOM
   let deletePost = function(deleteLink)
   {

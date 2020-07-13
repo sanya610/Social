@@ -38,6 +38,7 @@ class PostComments
                     let newComment = pSelf.newCommentDom(data.data.comment);
                     $(`#post-comments-${postId}`).prepend(newComment);
                     pSelf.deleteComment($(' .delete-comment-button', newComment));
+                    new ToggleLike($(' .toggle-like-button', newComment));
 
                     new Noty({
                         theme: 'relax',
@@ -61,6 +62,12 @@ class PostComments
                     <p>
                         <span id="comment-content" style="font-size: 1.3rem;">${comment.content}</span> 
                             
+                        <br>
+                        <small style="color: dimgray;">
+                            ${comment.user.name}  
+                        </small> 
+
+
                         <small id="like-comment">
                             <a class="toggle-like-button" href="/likes/toggle/?id=${comment._id}&type=Comment" data-likes="${comment.likes.length}"  data-id="${comment._id}" >
                                   <span id="toggle-i-${comment._id}">
@@ -74,12 +81,6 @@ class PostComments
                             <a href="/comments/destroy/${comment._id}"  class="delete-comment-button">
                                 <i class="fas fa-trash-alt"></i>
                             </a>
-                        </small> 
-                    
-                    
-                        <br>
-                        <small style="color: dimgray;">
-                            ${comment.user.name}  
                         </small> 
                     </p>
 
@@ -114,3 +115,6 @@ class PostComments
         });
     }
 }
+
+
+

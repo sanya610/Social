@@ -7,7 +7,14 @@
       <% if(user.id == profile_user.id){ %>
 
          <div id="friend-requests">
-            <h3>Friend Requests</h3>
+            <h3>
+               <span>
+                  <i class="fas fa-user-plus" style="color: rgb(1, 92, 87);"></i>
+               </span>
+                &nbsp;Friend Requests
+            </h3>
+
+
             <ol>
                <% for(i of profile_user.friendRequest){ %> 
                  <li>
@@ -15,8 +22,8 @@
                      <p><%= i.email%></p>
  
                      <form action="/isfriend/friend/<%= i._id %>" method="POST" id="friend-form-id">
-                        <input type="submit" name="friend" value="Confirm">
-                        <input type="submit" name="reject" value="Reject">
+                        <input type="submit" name="friend" value="Confirm" id="submit1">
+                        <input type="submit" name="reject" value="Reject" id="submit2">
                      </form>
                  </li>  
                <% } %>
@@ -39,15 +46,22 @@
    
 
          <div id="friends-list">
-            <h3>Friends</h3>
+            <h3>
+               <span>
+                  <i class="fas fa-user-friends" style="color:  rgb(1, 92, 87);;"></i>
+               </span>
+               &nbsp;Friends
+            </h3>
+
             <ul>
                <% for(j of profile_user.friendships){ %>
                   <li> 
                      <small>
-                       <%= j.name %>
+                        <% console.log(j._id); %>
+                        <a href="/users/profile/<%=j.id%>"><%= j.name %></a>
                      </small>
 
-                     <a href="/isfriend/destroy/<%= j._id%>"> 
+                     <a href="/isfriend/destroy/<%= j._id%>" id="destroy-friend"> 
                         <i class="fas fa-trash-alt"></i>
                      </a>
                   </li>       
@@ -84,6 +98,32 @@
             </form>   
            
          </div>
+
+         <div id="friends-list">
+            <h3>
+               <span>
+                  <i class="fas fa-user-friends" style="color:  rgb(1, 92, 87);;"></i>
+               </span>
+               &nbsp;Friends
+            </h3>
+
+            <ul>
+               <% for(j of profile_user.friendships){ %>
+                  <li> 
+                     <small>
+                        <% console.log(j._id); %>
+                        <a href="/users/profile/<%=j.id%>"><%= j.name %></a>
+                     </small>
+
+                     <a href="/isfriend/destroy/<%= j._id%>" id="destroy-friend"> 
+                        <i class="fas fa-trash-alt"></i>
+                     </a>
+                  </li>       
+               <% } %>   
+            </ul>
+         </div>   
+
+
   
       <% } %>   
       

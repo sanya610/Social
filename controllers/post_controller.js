@@ -1,36 +1,87 @@
-const Post = require('../models/post')
+const Post = require('../models/post');
+const fs = require('fs');
+const path = require('path');
 const Comment = require('../models/comment');
 const Like = require('../models/likes');
 
+
+
 module.exports.create = async function(req, res){
+
  try{
-      let post =  await Post.create({
-         content: req.body.content,
-         user: req.user._id 
-       });
-
-
-      if(req.xhr)
+      Post.uploadedPic(req,res,async function(err)
       {
-       post = await post.populate('user','name').execPopulate();
+         try{
+                  if(req.file){
+                     let post =  await Post.create({
+                        content: req.body.content,
+                        user: req.user._id,
+                        pic: Post.picPath + '/' + req.file.filename
+                     });
+                     
+                     console.log('content',req.body.content);
+                     console.log('req.body',req.body);
+                     console.log('post',post);
 
-       return res.status(200).json({
-        data: {
-          post: post
-        },
-          message: "post created !"
-       }); 
-      } 
+                     post = await post.populate('user', 'name email').execPopulate();   
 
+                     if(req.xhr){
+                        return res.status(200).json({
+                        data: {
+                           post: post
+                        },
+                           
+                        message: "post created !"
+                        }); 
+                     }
+                     req.flash('success','Post published!');
+                     // return res.status(200).json({
+                     //    data: {
+                     //       post: post
+                     //    },
+                     // });
+                     return res.redirect('back');
+                  }
+                  
 
-       req.flash('success','Post published!');
-       return res.redirect('back');
-   
+                  else{
+                     let post =  await Post.create({
+                        content: req.body.content,
+                        user: req.user._id
+                     });
+                     
+                      
+                      await post.populate('user','name').execPopulate();
+                      
+                     if(req.xhr){
+                        return res.status(200).json({
+                        data: {
+                           post: post
+                        },
+                        
+                        message: "post created !"
+                        }); 
+                     }   
+                     req.flash('success','Post published!');
+                     return res.redirect('back');
+                  }   
+            
+            
+            }catch(err){
+              console.log('error',err);
+              return res.redirect('back');
+            }
+      });
+
+      // req.flash('success','Post published!');
+      // return res.redirect('back');
+
     }catch(err){
-       req.flash('error',err);
+       console.log('error',err);
        return res.redirect('back'); 
     }
 }
+
 
 
 
@@ -73,3 +124,72 @@ module.exports.destroy = async function(req,res)
     }
 }
 
+
+
+
+
+
+
+
+
+// module.exports.create =async function(req, res){
+//    try{
+     
+//     await Post.uploadedPic(req, res, async function(err){
+//       try{
+//          console.log('hello world');
+//        if (req.file){
+//                  let post= await Post.create({
+//                  content: req.body.content,
+//                  user: req.user._id,
+//                  pic: Post.picPath + '/' + req.file.filename
+//                })
+//                //checking for the ajax request
+//              console.log("if",post);
+//              post = await post.populate('user', 'name email').execPopulate();
+//              if (req.xhr){
+//                return res.status(200).json({
+//                    data: {
+//                        post: post
+//                    },
+//                    message: "Post created!"
+//                });
+//              }
+//    }
+   
+//      else{
+//       console.log(req.body.content);
+//              console.log('hello');
+//              let post= await Post.create({
+//              content: req.body.content,
+//              user: req.user._id,
+//            });
+//          //  checking for the ajax request
+//          console.log("else",post);
+//          post = await post.populate('user', 'name email').execPopulate();
+//          if (req.xhr){
+//            return res.status(200).json({
+//                data: {
+//                    post: post
+//                },
+//                message: "Post created!"
+//            });
+//          }
+//    }
+//    console.log(post);
+//  }
+//  catch(err){
+//    req.flash('error',err);
+//       return;
+//  }
+ 
+//       req.flash('success','post is published');
+//      return res.redirect('back');
+//    });
+//    }
+//    catch(err){
+//       req.flash('error',err);
+//       return;
+//    }
+ 
+//  }

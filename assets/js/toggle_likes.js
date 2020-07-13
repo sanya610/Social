@@ -23,10 +23,7 @@ class ToggleLike{
 
                 if (data.data.deleted == true){
                     likesCount -= 1;
-                    // var elem = document.getElementById('toggle-i');
-                    // var x = elem.querySelector('i');
-                    // x.classList.remove('fas');
-                    // x.classList.add('far');
+                    
                     $(self).html(`<span id="toggle-i-${id}">${likesCount}&nbsp;&nbsp;<i class="far fa-heart"></span>`);
                     
                 }else{
