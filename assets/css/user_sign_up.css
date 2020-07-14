@@ -1,1 +1,52 @@
-#signup{width:553px;height:450px;margin-left:31%;background-image:linear-gradient(to right top,#75c797,#5e9597);border-radius:40px;margin-top:170px}#signup h1{padding-top:10px;text-align:center}#signup #google-login{width:146px;height:35px;padding:5px 7px 0;background-color:#447470;box-shadow:6px 6px 8px 0 #cacaca;margin-left:194.5px;border-radius:5px;margin-bottom:20px}#signup #google-login a{text-decoration:none;color:#fff8dc;font-size:1.3rem;font-family:sans-serif}#signup #form-id{display:block}#signup #form-id input{display:block;margin:26px 0;border:none;width:320px;height:40px;font-size:1rem;margin-left:106.5px;background-color:#ece5e5;border-radius:5px;padding-left:5px}#signup #form-id button{background-color:#447470;box-shadow:6px 6px 8px 0 #cacaca;border:none;border-radius:5px;color:#fff8dc;margin-left:219px;width:95px;height:35px;font-size:1.3rem;cursor:pointer}
+body {
+  background-image: url("../images/image7.jpg"); }
+
+#signup {
+  width: 553px;
+  height: 450px;
+  margin-left: 31%;
+  background-image: linear-gradient(to right top, #75c797, #5e9597);
+  border-radius: 40px;
+  box-shadow: 0px 0px 17px 4px #584c4c;
+  margin-top: 170px; }
+  #signup h1 {
+    padding-top: 10px;
+    text-align: center; }
+  #signup #google-login {
+    width: 146px;
+    height: 35px;
+    padding: 5px 7px 0px 7px;
+    background-color: #447470;
+    box-shadow: 6px 6px 8px 0px #cacaca;
+    margin-left: 194.5px;
+    border-radius: 5px;
+    margin-bottom: 20px; }
+    #signup #google-login a {
+      text-decoration: none;
+      color: cornsilk;
+      font-size: 1.3rem;
+      font-family: sans-serif; }
+  #signup #form-id {
+    display: block; }
+    #signup #form-id input {
+      display: block;
+      margin: 26px 0px;
+      border: none;
+      width: 320px;
+      height: 40px;
+      font-size: 1rem;
+      margin-left: 106.5px;
+      background-color: #ece5e5;
+      border-radius: 5px;
+      padding-left: 5px; }
+    #signup #form-id button {
+      background-color: #447470;
+      box-shadow: 6px 6px 8px 0px #cacaca;
+      border: none;
+      border-radius: 5px;
+      color: cornsilk;
+      margin-left: 219px;
+      width: 95px;
+      height: 35px;
+      font-size: 1.3rem;
+      cursor: pointer; }

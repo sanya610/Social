@@ -7,7 +7,6 @@
     let plain_form = document.querySelector('#new-post-form');
 
     newPostForm.submit(function(e){
-      console.log('hello rishabh');
     e.preventDefault();
 
     formData = new FormData(plain_form);
@@ -22,7 +21,6 @@
 
       success: function(data)
       {
-        console.log('hello rishabh');
         $('#new-post-form textarea').val('');
          $('#new-post-form input#post-pic').val('');
 
@@ -57,8 +55,6 @@
  {
    if(post.pic)
    {
-    console.log('found pic');  
-
     return $(`<li id="post-${post._id}">               
       <div class="main-post-div">  
 
@@ -116,8 +112,7 @@
     </li>`)
    } 
 
-   else{
-   console.log('couldnt found pic');  
+   else{  
     return $(`<li id="post-${post._id}">               
       <div class="main-post-div">  
 

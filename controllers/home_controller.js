@@ -16,6 +16,13 @@ try{
 
     let users = await User.find({});
 
+
+    if(!req.user)
+    {
+      res.redirect('/users/sign-in');
+    }
+
+
     if(req.user)
     var curr_user = await User.findById(req.user._id).populate('friendships','name avatar');
     
