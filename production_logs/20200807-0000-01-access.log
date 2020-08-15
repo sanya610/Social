@@ -1,0 +1,183 @@
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:32 +0000] "GET / HTTP/1.1" 302 72 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:32 +0000] "GET /users/sign-in HTTP/1.1" 200 2617 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:32 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://127.0.0.1:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:33 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:43 +0000] "POST /users/create-session HTTP/1.1" 302 72 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:43 +0000] "GET /users/sign-in HTTP/1.1" 200 2936 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:43 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://127.0.0.1:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:48 +0000] "POST /users/create-session HTTP/1.1" 302 46 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:48 +0000] "GET / HTTP/1.1" 200 12797 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:48 +0000] "GET /uploads/posts/pic/pic-1594547791871 HTTP/1.1" 404 174 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:49 +0000] "GET /uploads/posts/pic/pic-1594547771924 HTTP/1.1" 404 174 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:11:59:56 +0000] "POST /search HTTP/1.1" 200 1880 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:05 +0000] "GET /posts/destroy/5f0ade4f26f9913ef86e8340 HTTP/1.1" 200 74 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:06 +0000] "GET /posts/destroy/5f0ade3b26f9913ef86e833b HTTP/1.1" 200 74 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:10 +0000] "POST /posts/create HTTP/1.1" 200 274 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:19 +0000] "POST /posts/create HTTP/1.1" 200 358 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:25 +0000] "GET /users/features/todo/5ee233349c48830765cb7464 HTTP/1.1" 200 4216 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:25 +0000] "GET /js/home.js HTTP/1.1" 404 149 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:25 +0000] "GET /js/home.js HTTP/1.1" 404 149 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:36 +0000] "POST /users/features/todo/createTodo HTTP/1.1" 302 176 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:36 +0000] "GET /users/features/todo/5ee233349c48830765cb7464 HTTP/1.1" 200 4763 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:36 +0000] "GET /js/home.js HTTP/1.1" 404 149 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:36 +0000] "GET /js/home.js HTTP/1.1" 404 149 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:47 +0000] "POST /users/features/todo/createTodo HTTP/1.1" 302 176 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:47 +0000] "GET /users/features/todo/5ee233349c48830765cb7464 HTTP/1.1" 200 5311 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:47 +0000] "GET /js/home.js HTTP/1.1" 404 149 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:47 +0000] "GET /js/home.js HTTP/1.1" 404 149 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:54 +0000] "POST /users/features/todo/delete-list HTTP/1.1" 302 176 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:54 +0000] "GET /users/features/todo/5ee233349c48830765cb7464 HTTP/1.1" 200 4216 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:54 +0000] "GET /js/home.js HTTP/1.1" 404 149 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:54 +0000] "GET /js/home.js HTTP/1.1" 404 149 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:56 +0000] "GET / HTTP/1.1" 200 10283 "http://127.0.0.1:8000/users/features/todo/5ee233349c48830765cb7464" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:00:59 +0000] "GET /users/profile/5efa22193fc78c5e33a65a2b HTTP/1.1" 200 3571 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:01:02 +0000] "GET / HTTP/1.1" 304 - "http://127.0.0.1:8000/users/profile/5efa22193fc78c5e33a65a2b" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:01:06 +0000] "POST /search HTTP/1.1" 200 286 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:01:07 +0000] "GET /users/profile/5efa22193fc78c5e33a65a2b HTTP/1.1" 304 - "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:01:08 +0000] "GET / HTTP/1.1" 304 - "http://127.0.0.1:8000/users/profile/5efa22193fc78c5e33a65a2b" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:01:24 +0000] "GET /users/sign-out HTTP/1.1" 302 46 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:01:24 +0000] "GET / HTTP/1.1" 302 72 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:01:24 +0000] "GET /users/sign-in HTTP/1.1" 200 2617 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:01:24 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://127.0.0.1:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:01:25 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:08 +0000] "GET / HTTP/1.1" 302 72 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:08 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:08 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://127.0.0.1:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:22 +0000] "POST /users/create-session HTTP/1.1" 302 46 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:22 +0000] "GET / HTTP/1.1" 200 10602 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:25 +0000] "GET /users/sign-out HTTP/1.1" 302 46 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:25 +0000] "GET / HTTP/1.1" 302 72 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:25 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:25 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://127.0.0.1:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Aug/2020:12:02:28 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:04:45 +0000] "GET / HTTP/1.1" 302 72 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:04:45 +0000] "GET /users/sign-in HTTP/1.1" 200 2617 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:04:46 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://localhost:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:04:47 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:04:48 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:05:32 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:05:32 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://localhost:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:05:34 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+[0mGET /users/sign-in [32m200[0m 29.357 ms - 2573[0m
+[0mGET /users/auth/google [36m302[0m 16.489 ms - 0[0m
+[0mGET /users/sign-in [36m304[0m 26.721 ms - -[0m
+[0mGET /users/auth/google [36m302[0m 14.392 ms - 0[0m
+::1 - - [06/Aug/2020:12:10:55 +0000] "GET /users/sign-in HTTP/1.1" 200 2617 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:10:56 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://localhost:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:11:00 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:12:00 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:12:11 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:12:18 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:12:19 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:13:17 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:13:17 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://localhost:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:13:20 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:14:23 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:14:27 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:14:28 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:14:28 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:14:42 +0000] "GET / HTTP/1.1" 302 72 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:14:42 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:14:42 +0000] "GET /images/image7.jpg HTTP/1.1" 404 156 "http://localhost:8000/css/user_sign_in-db03ed5eec.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:14:45 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:14:48 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+::1 - - [06/Aug/2020:12:15:04 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+[0mPOST /users/create-session [36m302[0m 28.261 ms - 46[0m
+[0mGET / [32m200[0m 61.361 ms - 9183[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 25.367 ms - 4770[0m
+[0mPOST /isfriend [32m200[0m 19.835 ms - 46[0m
+[0mGET / [32m200[0m 41.287 ms - 8864[0m
+[0mGET /users/profile/5efa22193fc78c5e33a65a2b [32m200[0m 27.963 ms - 3824[0m
+[0mGET /isfriend/destroy/5ee233349c48830765cb7464 [36m302[0m 22.377 ms - 164[0m
+[0mGET /users/profile/5efa22193fc78c5e33a65a2b [32m200[0m 17.104 ms - 3398[0m
+[0mGET / [32m200[0m 51.730 ms - 8574[0m
+[0mPOST /search [32m200[0m 20.976 ms - 903[0m
+[0mGET /users/profile/5f0024cd28e821363b510a22 [32m200[0m 16.911 ms - 3110[0m
+[0mPOST /isfriend [32m200[0m 20.436 ms - 49[0m
+[0mGET / [36m304[0m 45.478 ms - -[0m
+[0mGET /users/sign-out [36m302[0m 12.818 ms - 46[0m
+[0mGET / [36m302[0m 14.967 ms - 72[0m
+[0mGET /users/sign-in [32m200[0m 6.281 ms - 2573[0m
+[0mPOST /users/create-session [36m302[0m 11.024 ms - 46[0m
+[0mGET / [32m200[0m 31.667 ms - 10207[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 34.080 ms - 4759[0m
+[0mGET / [32m200[0m 42.219 ms - 9888[0m
+[0mGET /users/sign-out [36m302[0m 7.929 ms - 46[0m
+[0mGET / [36m302[0m 20.205 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 6.836 ms - -[0m
+[0mPOST /users/create-session [36m302[0m 11.290 ms - 46[0m
+[0mGET / [32m200[0m 20.633 ms - 8893[0m
+[0mPOST /search [32m200[0m 16.199 ms - 929[0m
+[0mPOST /search [32m200[0m 16.207 ms - 760[0m
+[0mPOST /search [32m200[0m 19.272 ms - 760[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 15.030 ms - 4377[0m
+[0mPOST /isfriend [32m200[0m 16.510 ms - 49[0m
+[0mGET /users/sign-out [36m302[0m 11.458 ms - 46[0m
+[0mGET / [36m302[0m 18.592 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 3.750 ms - -[0m
+[0mPOST /users/create-session [36m302[0m 11.323 ms - 46[0m
+[0mGET / [32m200[0m 39.832 ms - 10207[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 36.178 ms - 5219[0m
+[0mPOST /isfriend/friend/5efa22193fc78c5e33a65a2b [36m302[0m 92.392 ms - 164[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 18.866 ms - 5498[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 75.408 ms - 5178[0m
+[0mGET /isfriend/destroy/5efa22193fc78c5e33a65a2b [36m302[0m 76.026 ms - 164[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 46.158 ms - 5070[0m
+[0mGET /isfriend/destroy/5eedc09dd4853c1dc6eab37a [36m302[0m 34.059 ms - 164[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 25.253 ms - 4331[0m
+[0mGET /isfriend/destroy/5eedc07fd4853c1dc6eab379 [36m302[0m 20.359 ms - 164[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 29.393 ms - 3904[0m
+[0mGET /isfriend/destroy/5ee8fe3a41b0b4311b91da5b [36m302[0m 28.563 ms - 164[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 22.619 ms - 3477[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [36m304[0m 29.893 ms - -[0m
+[0mGET /users/sign-out [36m302[0m 13.955 ms - 46[0m
+[0mGET / [36m302[0m 31.832 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 9.279 ms - -[0m
+[0mPOST /users/create-session [36m302[0m 12.231 ms - 46[0m
+[0mGET / [32m200[0m 26.119 ms - 8893[0m
+[0mPOST /search [32m200[0m 13.149 ms - 653[0m
+[0mPOST /search [32m200[0m 18.474 ms - 653[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 23.430 ms - 3170[0m
+[0mPOST /isfriend [32m200[0m 21.122 ms - 49[0m
+[0mGET /users/sign-out [36m302[0m 10.600 ms - 46[0m
+[0mGET / [36m302[0m 17.817 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 11.463 ms - -[0m
+[0mPOST /users/create-session [36m302[0m 5.129 ms - 46[0m
+[0mGET / [32m200[0m 25.554 ms - 9353[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 41.326 ms - 3937[0m
+[0mPOST /isfriend/friend/5efa22193fc78c5e33a65a2b [36m302[0m 31.370 ms - 164[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 12.757 ms - 4216[0m
+[0mGET /isfriend/destroy/5efa22193fc78c5e33a65a2b [36m302[0m 29.820 ms - 164[0m
+[0mGET /users/profile/5ee233349c48830765cb7464 [32m200[0m 14.418 ms - 3788[0m
+[0mGET /users/sign-out [36m302[0m 8.050 ms - 46[0m
+[0mGET / [36m302[0m 452.144 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 9.017 ms - -[0m
+[0mGET /users/sign-in [36m304[0m 8.470 ms - -[0m
+[0mGET /users/sign-up [32m200[0m 44.603 ms - 2558[0m
+[0mPOST /users/create [36m302[0m 63.534 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 5.315 ms - -[0m
+[0mGET /users/sign-up [36m304[0m 9.720 ms - -[0m
+[0mPOST /users/create [36m302[0m 11.304 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 3.224 ms - -[0m
+[0mPOST /users/create-session [36m302[0m 4.661 ms - 46[0m
+[0mGET / [32m200[0m 15.863 ms - 5970[0m
+[0mPOST /search [32m200[0m 14.412 ms - 499[0m
+[0mGET /users/profile/5f2bf8fb21066970e70ca06f [32m200[0m 24.437 ms - 3115[0m
+[0mPOST /isfriend [32m200[0m 15.950 ms - 49[0m
+[0mGET /users/sign-out [36m302[0m 8.041 ms - 46[0m
+[0mGET / [36m302[0m 9.977 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 3.818 ms - -[0m
+[0mPOST /users/create-session [36m302[0m 8.685 ms - 46[0m
+[0mGET / [32m200[0m 15.960 ms - 5957[0m
+[0mGET / [36m302[0m 6.385 ms - 72[0m
+[0mGET /users/sign-in [32m200[0m 3.899 ms - 2573[0m
+[0mPOST /users/create-session [36m302[0m 11.395 ms - 46[0m
+[0mGET / [32m200[0m 13.233 ms - 5970[0m
+[0mGET /users/profile/5f2bf8fb21066970e70ca06f [32m200[0m 59.893 ms - 3891[0m
+[0mPOST /isfriend/friend/5f2bf8ed21066970e70ca06e [36m302[0m 74.307 ms - 164[0m
+[0mGET /users/profile/5f2bf8fb21066970e70ca06f [32m200[0m 23.304 ms - 4155[0m
+[0mGET / [32m200[0m 70.501 ms - 5939[0m
+[0mPOST /posts/create [32m200[0m 102.859 ms - 268[0m
+[0mPOST /posts/create [32m200[0m 44.647 ms - 268[0m
+[0mPOST /comments/create [36m302[0m 158.474 ms - 46[0m
+[0mGET / [32m200[0m 75.144 ms - 10272[0m

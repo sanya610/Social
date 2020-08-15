@@ -93,6 +93,11 @@ module.exports.friend = async function(req,res)
          receiver.save();
          requestor.friendships.push(receiver._id);
          requestor.save();
+
+         let friend1= await Friendship.create({
+          to_user: req.user._id,
+          from_user: req.params.id
+        });
        
          await User.findByIdAndUpdate(receiver.id, {$pull : {friendRequest: requestor.id}});
           
@@ -127,6 +132,25 @@ module.exports.remove_friend = async function(req,res)
       
       await User.findByIdAndUpdate(req.user._id, {$pull : {friendships: req.params.id}});
       await User.findByIdAndUpdate(req.params.id, {$pull : {friendships: req.user._id}});
+      
+      
+      
+      let friend= await Friendship.findOne({
+        from_user : req.user._id,
+        to_user : req.params.id
+      });
+  
+      if(friend==null)
+      {
+        friend= await Friendship.findOne({
+          from_user :req.params.id,
+          to_user: req.user._id
+        });
+      }
+
+      await Friendship.findByIdAndDelete(friend._id);
+      let user = await User.findById(req.params.id);
+      req.flash('error','Unfriended ',user.name);
       return res.redirect('back');
 
     }catch(err){

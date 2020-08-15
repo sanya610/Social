@@ -46,7 +46,7 @@
                     <i class="fas fa-user-friends"></i>
                   <%}%>
  
-                  <a href="/users/profile/<%=u.id%>"><%= u.name %></a>
+                  <a class="chat-button" href="/users/chat/<%=u.id%>"><%= u.name %></a>
                </p>
             </li>
             <% } %>
@@ -113,7 +113,8 @@
 
           <p>
             <% if(locals.user){ %>
-               <a href="/users/features/calculator">
+
+               <a  href="/users/features/calculator">
                 <i class="fas fa-calculator"></i>
                   <span>
                       CALCULATOR
@@ -144,11 +145,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script src="<%= assetPath('js/chat_engine.js') %>"></script>
 
-<% if (locals.user){ %>
-    <script>
-        new ChatEngine('user-chat-box', '<%= locals.user.email %>')
-    </script>
-<% } %>
 
 
 

@@ -1,34 +1,49 @@
 #user-chat-box {
-  z-index: 1;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  height: 305px;
-  width: 236px;
-  background: aliceblue;
-  border: 3px solid black;
+  bottom: 10vh;
+  right: 12px;
+  border: 1px dashed grey;
+  height: 360px;
+  width: 270px;
+  background: white;
   padding: 5px;
-  box-shadow: 1px 1px 1px 1px lightgrey; }
+  box-shadow: 3px 3px 4px 4px lightgrey;
+  border: 2px solid black; }
+  #user-chat-box #friend-name {
+    width: 280px;
+    height: 30px;
+    border: 2px solid black;
+    margin-top: -10px;
+    margin-left: -7px;
+    font-size: 19px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 10px;
+    background-color: darkslategray;
+    color: white; }
   #user-chat-box #chat-messages-list {
     list-style: none;
     padding: 10px;
-    height: 70%;
-    background-color: aliceblue;
-    overflow: auto; }
+    height: 74%;
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden; }
     #user-chat-box #chat-messages-list .other-message {
       text-align: left;
       padding: 5px; }
       #user-chat-box #chat-messages-list .other-message span {
         display: inline-block;
         padding: 15px;
-        background-color: #63bba8; }
+        background-color: #94ce81;
+        border-radius: 10px; }
     #user-chat-box #chat-messages-list .self-message {
       text-align: right;
       padding: 5px; }
       #user-chat-box #chat-messages-list .self-message span {
         display: inline-block;
         padding: 15px;
-        background-color: #6fc298; }
+        background-color: #4c9eab;
+        border-radius: 10px; }
   #user-chat-box #chat-message-input-container {
     height: 24%;
     width: 100%;
@@ -36,13 +51,11 @@
     flex-direction: row; }
     #user-chat-box #chat-message-input-container #chat-message-input {
       height: 50%;
-      width: 70%;
-      border-radius: 4px; }
+      width: 70%; }
     #user-chat-box #chat-message-input-container #send-message {
       height: 50%;
       width: 30%;
-      font-size: 20px;
+      font-size: 25px;
       color: white;
       border: none;
-      border-radius: 4px;
-      background: #4ab84a; }
+      background: #287b33; }

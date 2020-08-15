@@ -66,8 +66,6 @@ class PostComments
                         <small style="color: dimgray;">
                             ${comment.user.name}  
                         </small> 
-
-
                         <small id="like-comment">
                             <a class="toggle-like-button" href="/likes/toggle/?id=${comment._id}&type=Comment" data-likes="${comment.likes.length}"  data-id="${comment._id}" >
                                   <span id="toggle-i-${comment._id}">
@@ -83,7 +81,6 @@ class PostComments
                             </a>
                         </small> 
                     </p>
-
                 </li>`);
     }
 
@@ -115,6 +112,3 @@ class PostComments
         });
     }
 }
-
-
-

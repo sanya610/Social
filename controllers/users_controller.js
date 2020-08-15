@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Friendship=require('../models/friendships');
 const fs = require('fs');
 const path = require('path');
 
@@ -171,8 +172,48 @@ module.exports.destroySession = function(req,res)
 }
 
 
+module.exports.chat=async function(req,res){
+  try{
 
+      let users=await User.findById(req.user._id);
 
+      let friend= await Friendship.findOne({
+          from_user :req.user._id,
+          to_user : req.params.id
+      }).populate('to_user').populate('from_user');
+    
+      if(friend==null)
+      {
+      friend= await Friendship.findOne({
+          from_user :req.params.id,
+          to_user: req.user._id
+      }).populate('to_user').populate('from_user');
+      }
+      console.log('friend chat',friend);
+      console.log('friend user chat',friend.from_user);
+        
+      let friendName='';
+      let fri= await User.findById(req.params.id);
+       friendName=fri.name;
+      
+
+      if (req.xhr){
+          console.log("searching all users")
+            return res.status(200).json({
+                data: {
+                    friend:friend,
+                    myid: users.email,
+                    friendName :fri.name
+                },
+                message: "setting up private chat"
+            });
+        }
+        
+      }
+      catch(err){
+          console.log('error',err);
+      }
+  }
 
 
 

@@ -68,7 +68,8 @@
         color: #025d5d; }
     #user-friend-Section #User-friends ul {
       list-style: none;
-      padding-left: 0px; }
+      padding-left: 0px;
+      overflow-y: auto; }
       #user-friend-Section #User-friends ul p {
         font-size: 18px; }
         #user-friend-Section #User-friends ul p i {

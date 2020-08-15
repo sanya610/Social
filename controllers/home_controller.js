@@ -3,40 +3,40 @@ const User=require('../models/user');
 
 
 module.exports.home=async function(req,res){
-try{
-    let posts=await Post.find({})
-    .sort('-createdAt')
-    .populate('user')
-    .populate({
-        path: 'comments',
-        populate: {
-             path: 'user'
+  try{
+      let posts=await Post.find({})
+      .sort('-createdAt')
+      .populate('user')
+      .populate({
+          path: 'comments',
+          populate: {
+               path: 'user'
+        }
+      });
+  
+      let users = await User.find({});
+  
+  
+      if(!req.user)
+      {
+        res.redirect('/users/sign-in');
       }
-    });
-
-    let users = await User.find({});
-
-
-    if(!req.user)
-    {
-      res.redirect('/users/sign-in');
+  
+  
+      if(req.user)
+      var curr_user = await User.findById(req.user._id).populate('friendships','name avatar');
+      
+      return res.render('home',{
+          title: 'social|home',
+          posts: posts,
+          all_users: users,
+          curr_user: curr_user
+      });
+     }
+     catch(err){
+       console.log('error',err);
+     }
     }
-
-
-    if(req.user)
-    var curr_user = await User.findById(req.user._id).populate('friendships','name avatar');
-    
-    return res.render('home',{
-        title: 'social|home',
-        posts: posts,
-        all_users: users,
-        curr_user: curr_user
-    });
-   }
-   catch(err){
-     console.log('error',err);
-   }
-  }
 
 
 module.exports.searchUser = async function(req,res)
