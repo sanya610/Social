@@ -5,9 +5,7 @@ const Comment = require('../models/comment');
 const Like = require('../models/likes');
 
 
-
 module.exports.create = async function(req, res){
-
  try{
       Post.uploadedPic(req,res,async function(err)
       {

@@ -6,7 +6,6 @@ const PIC_PATH = path.join('/uploads/posts/pic');
 
 
 const postSchema = new mongoose.Schema({
-
     content: {
         type: String,
         required: true
